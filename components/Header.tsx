@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Header() {
   return (
     <header className="bg-blue-900 text-white">
@@ -7,33 +9,19 @@ export default function Header() {
           <h1 className="text-2xl font-bold">
             Knights of Columbus
           </h1>
-
           <p className="text-yellow-400">
             Council 12906 • Covington, Louisiana
           </p>
         </div>
 
-        <nav className="hidden space-x-6 md:flex">
+        <nav className="hidden gap-6 md:flex">
 
-          <a href="/" className="hover:text-yellow-400">
-            Home
-          </a>
-
-          <a href="/about" className="hover:text-yellow-400">
-            About
-          </a>
-
-          <a href="/events" className="hover:text-yellow-400">
-            Events
-          </a>
-
-          <a href="/membership" className="hover:text-yellow-400">
-            Membership
-          </a>
-
-          <a href="/contact" className="hover:text-yellow-400">
-            Contact
-          </a>
+          <Link href="/">Home</Link>
+          <Link href="/about">About</Link>
+          <Link href="/events">Events</Link>
+          <Link href="/membership">Membership</Link>
+          <Link href="/gallery">Gallery</Link>
+          <Link href="/contact">Contact</Link>
 
         </nav>
 
