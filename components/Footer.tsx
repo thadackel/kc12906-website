@@ -1,23 +1,38 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
-    <footer className="bg-blue-900 px-6 py-10 text-center text-white">
+    <footer className="bg-blue-950 px-6 py-12 text-white">
+      <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-3">
+        <div>
+          <h2 className="text-2xl font-black">Knights of Columbus Council 12906</h2>
+          <p className="mt-4 leading-7 text-slate-200">
+            Catholic men serving St. Peter Parish and the Covington community
+            through charity, unity, fraternity, and patriotism.
+          </p>
+        </div>
 
-      <h2 className="text-xl font-bold">
-        Knights of Columbus Council 12906
-      </h2>
+        <div>
+          <h3 className="font-black text-yellow-400">Monthly Meeting</h3>
+          <p className="mt-4 text-slate-200">St. Mary's Hall</p>
+          <p className="text-slate-200">Second Tuesday of each month</p>
+          <p className="text-slate-200">6:30 PM Rosary • 6:50 PM Meal • 7:05 PM Meeting</p>
+        </div>
 
-      <p className="mt-2">
-        Covington, Louisiana
-      </p>
+        <div>
+          <h3 className="font-black text-yellow-400">Quick Links</h3>
+          <div className="mt-4 grid gap-2 text-slate-200">
+            <Link href="/membership" className="hover:text-yellow-400">Become a Knight</Link>
+            <Link href="/events" className="hover:text-yellow-400">Events & Meetings</Link>
+            <Link href="/programs" className="hover:text-yellow-400">Programs</Link>
+            <Link href="/contact" className="hover:text-yellow-400">Contact</Link>
+          </div>
+        </div>
+      </div>
 
-      <p className="mt-4 text-yellow-400">
+      <div className="mx-auto mt-10 max-w-7xl border-t border-blue-800 pt-6 text-center text-sm text-slate-300">
         Charity • Unity • Fraternity • Patriotism
-      </p>
-
-      <p className="mt-4 text-sm">
-        Serving our parish and community through faith and service.
-      </p>
-
+      </div>
     </footer>
   );
 }

@@ -2,158 +2,45 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SectionTitle from "@/components/SectionTitle";
 
-export default function Home() {
+export default function About() {
   return (
     <>
       <Header />
+      <main className="mx-auto max-w-7xl px-6 py-16">
+        <SectionTitle
+          eyebrow="About"
+          title="About Council 12906"
+          subtitle="Knights of Columbus Council 12906 is based at St. Peter Catholic Church in Covington, Louisiana."
+        />
 
-      <main>
-
-        {/* Hero Section */}
-        <section className="bg-gray-100 px-6 py-24 text-center">
-
-          <h1 className="text-5xl font-bold text-blue-900">
-            Knights of Columbus
-            <br />
-            Council 12906
-          </h1>
-
-          <p className="mx-auto mt-6 max-w-3xl text-xl">
-            Serving St. Peter Parish and the Covington community
-            through faith, fellowship, and charitable service.
+        <section className="mx-auto mt-12 max-w-4xl space-y-6 text-lg leading-8 text-slate-700">
+          <p>
+            Council 12906 brings Catholic men together in faith, fellowship, and
+            charitable service. The council supports St. Peter Parish, assists
+            local ministries, and serves the Covington community.
           </p>
 
-          <div className="mt-8">
-
-            <a
-              href="/membership"
-              className="rounded bg-yellow-500 px-8 py-3 font-bold text-blue-900"
-            >
-              Become a Knight
-            </a>
-
-          </div>
-
-        </section>
-
-
-        {/* Mission */}
-        <section className="mx-auto max-w-6xl px-6 py-16">
-
-          <SectionTitle
-            title="Our Mission"
-            subtitle="Faith. Service. Brotherhood."
-          />
-
-
-          <p className="mx-auto mt-8 max-w-4xl text-center text-lg">
-
-            Knights of Columbus Council 12906 is dedicated to
-            serving our Catholic faith, supporting families,
-            helping those in need, and strengthening our community
-            through acts of charity and service.
-
+          <p>
+            The council meeting is held on the second Tuesday of each month at
+            St. Mary's Hall. The evening begins with the Rosary at 6:30 PM,
+            followed by a meal at 6:50 PM and the general membership meeting at
+            7:05 PM.
           </p>
 
+          <p>
+            The council's work is grounded in the Knights of Columbus principles
+            of Charity, Unity, Fraternity, and Patriotism.
+          </p>
         </section>
 
-
-        {/* Four Principles */}
-        <section className="bg-gray-100 px-6 py-16">
-
-          <div className="mx-auto max-w-6xl">
-
-            <SectionTitle title="Our Principles" />
-
-
-            <div className="mt-10 grid gap-6 md:grid-cols-4">
-
-              {[
-                "Charity",
-                "Unity",
-                "Fraternity",
-                "Patriotism",
-              ].map((item) => (
-
-                <div
-                  key={item}
-                  className="rounded-lg bg-white p-6 text-center shadow"
-                >
-
-                  <h3 className="text-xl font-bold text-blue-900">
-                    {item}
-                  </h3>
-
-                </div>
-
-              ))}
-
-            </div>
-
-          </div>
-
+        <section className="mt-14 rounded-2xl bg-blue-950 p-8 text-white">
+          <p className="text-sm font-black uppercase tracking-[0.25em] text-yellow-400">
+            Leadership
+          </p>
+          <h2 className="mt-3 text-3xl font-black">Grand Knight: Gerald Nuss</h2>
         </section>
-
-
-        {/* Service Areas */}
-        <section className="mx-auto max-w-6xl px-6 py-16">
-
-          <SectionTitle
-            title="Serving Our Community"
-          />
-
-
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-
-
-            <div className="rounded border p-6">
-
-              <h3 className="text-xl font-bold text-blue-900">
-                Parish Support
-              </h3>
-
-              <p className="mt-3">
-                Supporting our church, clergy, and Catholic families.
-              </p>
-
-            </div>
-
-
-            <div className="rounded border p-6">
-
-              <h3 className="text-xl font-bold text-blue-900">
-                Community Service
-              </h3>
-
-              <p className="mt-3">
-                Providing assistance through charitable programs.
-              </p>
-
-            </div>
-
-
-            <div className="rounded border p-6">
-
-              <h3 className="text-xl font-bold text-blue-900">
-                Fellowship
-              </h3>
-
-              <p className="mt-3">
-                Building friendships through faith and service.
-              </p>
-
-            </div>
-
-
-          </div>
-
-        </section>
-
-
       </main>
-
       <Footer />
-
     </>
   );
 }
