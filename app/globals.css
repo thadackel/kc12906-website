@@ -18,3 +18,8 @@ body {
 a {
   text-decoration: none;
 }
+
+::selection {
+  background: #eab308;
+  color: #172554;
+}

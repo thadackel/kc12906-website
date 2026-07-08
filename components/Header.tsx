@@ -16,37 +16,28 @@ const navItems = [
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-blue-950 text-white shadow-xl">
-
       <div className="border-b-4 border-yellow-500">
-
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-8 py-8">
-
-          <Link href="/" className="flex items-center gap-6">
-
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:px-8 md:py-8">
+          <Link href="/" className="flex items-center gap-5 md:gap-6">
             <Image
               src="/images/branding/kofc-logo.png"
               alt="Knights of Columbus Logo"
-              width={110}
-              height={110}
-              className="rounded-full bg-white p-2 shadow-lg"
+              width={108}
+              height={108}
+              priority
+              className="h-20 w-20 rounded-full bg-white object-contain p-2 shadow-lg md:h-[110px] md:w-[110px]"
             />
-
             <div>
-
-              <h1 className="text-4xl font-black tracking-tight">
+              <h1 className="text-3xl font-black tracking-tight md:text-4xl">
                 Knights of Columbus
               </h1>
-
-              <p className="mt-2 text-2xl font-bold text-yellow-400">
+              <p className="mt-2 text-xl font-bold text-yellow-400 md:text-2xl">
                 Council 12906
               </p>
-
-              <p className="text-lg text-white/90">
+              <p className="text-base text-white/90 md:text-lg">
                 Covington, Louisiana
               </p>
-
             </div>
-
           </Link>
 
           <Link
@@ -55,25 +46,16 @@ export default function Header() {
           >
             Become a Knight
           </Link>
-
         </div>
-
       </div>
 
-      <nav className="mx-auto flex max-w-7xl flex-wrap justify-center gap-8 px-8 py-5 text-lg font-bold">
-
+      <nav className="mx-auto flex max-w-7xl flex-wrap justify-center gap-x-6 gap-y-3 px-6 py-4 text-base font-bold md:gap-x-8 md:px-8 md:text-lg">
         {navItems.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            className="transition hover:text-yellow-400"
-          >
+          <Link key={item.href} href={item.href} className="transition hover:text-yellow-400">
             {item.label}
           </Link>
         ))}
-
       </nav>
-
     </header>
   );
 }

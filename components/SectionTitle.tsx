@@ -14,16 +14,10 @@ export default function SectionTitle({
           {eyebrow}
         </p>
       )}
-
       <h2 className="mt-3 text-3xl font-black tracking-tight text-blue-950 md:text-5xl">
         {title}
       </h2>
-
-      {subtitle && (
-        <p className="mt-5 text-lg leading-8 text-slate-600">
-          {subtitle}
-        </p>
-      )}
+      {subtitle && <p className="mt-5 text-lg leading-8 text-slate-600">{subtitle}</p>}
     </div>
   );
 }

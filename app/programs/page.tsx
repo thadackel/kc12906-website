@@ -23,10 +23,9 @@ export default function Programs() {
           title="Faith, family, community, and life"
           subtitle="Council 12906 participates in programs that benefit St. Peter Parish and the surrounding community."
         />
-
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {programs.map(([title, text]) => (
-            <div key={title} className="rounded-xl border p-8 shadow-sm">
+            <div key={title} className="rounded-2xl border p-8 shadow-sm">
               <h2 className="text-2xl font-black text-blue-950">{title}</h2>
               <p className="mt-4 leading-7 text-slate-600">{text}</p>
             </div>
