@@ -9,9 +9,17 @@ export default function Page() {
       <main className="mx-auto max-w-7xl px-6 py-16">
         <SectionTitle
           eyebrow="About"
-          title="About Council 12906"
-          subtitle="Knights of Columbus Council 12906 is based at St. Peter Catholic Church in Covington, Louisiana."
+          title="About St. Peter Council 12906"
+          subtitle="Knights of Columbus St. Peter Council 12906 serves St. Peter Catholic Church and the Covington, Louisiana community."
         />
+        <section className="mx-auto mt-10 max-w-4xl rounded-2xl border border-blue-100 bg-blue-50 p-6 text-center shadow-sm">
+          <p className="text-lg font-black text-blue-950">Knights of Columbus</p>
+          <p className="mt-1 text-lg font-bold text-blue-900">St. Peter Council 12906</p>
+          <address className="mt-3 not-italic leading-7 text-slate-700">
+            125 East 19th Ave.<br />
+            Covington, LA 70433
+          </address>
+        </section>
         <section className="mx-auto mt-12 max-w-4xl space-y-6 text-lg leading-8 text-slate-700">
           <p>
             Council 12906 was organized in 2001 at the request of Pastor Fr. William
