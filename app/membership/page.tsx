@@ -17,7 +17,7 @@ export default function Membership() {
         <SectionTitle
           eyebrow="Membership"
           title="Become a Knight"
-          subtitle="Council 12906 welcomes Catholic men who want to serve, grow in faith, and support their families and parish."
+          subtitle="St. Peter Council 12906 welcomes Catholic men who want to serve, grow in faith, and support their families and parish."
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {reasons.map(([title, text]) => (
@@ -52,6 +52,12 @@ export default function Membership() {
           <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-100">
             Visit a meeting, speak with Grand Knight Gerald Nuss, or contact the council for more information about membership.
           </p>
+          <address className="mt-5 not-italic leading-7 text-slate-100">
+            Knights of Columbus<br />
+            St. Peter Council 12906<br />
+            125 East 19th Ave.<br />
+            Covington, LA 70433
+          </address>
           <Link href="/contact" className="mt-8 inline-block rounded-lg bg-yellow-500 px-8 py-4 text-lg font-black text-blue-950 hover:bg-yellow-400">
             Contact the Council
           </Link>
