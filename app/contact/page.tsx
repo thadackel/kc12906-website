@@ -9,13 +9,13 @@ export default function Page() {
       <main className="mx-auto max-w-7xl px-6 py-16">
         <SectionTitle
           eyebrow="Contact"
-          title="Contact Council 12906"
+          title="Contact St. Peter Council 12906"
           subtitle="We welcome questions about membership, service projects, meetings, and council activities."
         />
         <div className="mx-auto mt-12 grid max-w-5xl gap-6 md:grid-cols-2">
           <section className="rounded-3xl border p-8 shadow-sm">
             <h2 className="text-2xl font-black text-blue-950">Meeting Information</h2>
-            <p className="mt-4"><strong>Location:</strong> St. Mary's Hall</p>
+            <p className="mt-4"><strong>Location:</strong> St. Mary&apos;s Hall</p>
             <p className="mt-2"><strong>When:</strong> Second Tuesday of each month</p>
             <ul className="mt-4 space-y-2">
               <li>6:30 PM — Rosary</li>
@@ -25,6 +25,12 @@ export default function Page() {
           </section>
           <section className="rounded-3xl border p-8 shadow-sm">
             <h2 className="text-2xl font-black text-blue-950">Council Contact</h2>
+            <p className="mt-4 font-bold">Knights of Columbus</p>
+            <p>St. Peter Council 12906</p>
+            <address className="mt-3 not-italic leading-7 text-slate-700">
+              125 East 19th Ave.<br />
+              Covington, LA 70433
+            </address>
             <p className="mt-4"><strong>Grand Knight:</strong> Gerald Nuss</p>
             <p className="mt-4 text-slate-600">Contact email and phone number can be added here once confirmed.</p>
           </section>
