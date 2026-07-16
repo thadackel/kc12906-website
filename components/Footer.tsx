@@ -5,7 +5,12 @@ export default function Footer() {
     <footer className="bg-blue-950 px-6 py-14 text-white">
       <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-4">
         <div className="md:col-span-2">
-          <h2 className="text-2xl font-black">Knights of Columbus Council 12906</h2>
+          <h2 className="text-2xl font-black">Knights of Columbus</h2>
+          <p className="mt-2 text-lg font-bold text-slate-100">St. Peter Council 12906</p>
+          <address className="mt-4 not-italic leading-7 text-slate-200">
+            125 East 19th Ave.<br />
+            Covington, LA 70433
+          </address>
           <p className="mt-4 max-w-xl leading-7 text-slate-200">
             Catholic men serving St. Peter Parish and the Covington community
             through charity, unity, fraternity, and patriotism.
@@ -16,7 +21,7 @@ export default function Footer() {
         </div>
         <div>
           <h3 className="font-black text-yellow-400">Monthly Meeting</h3>
-          <p className="mt-4 text-slate-200">St. Mary's Hall</p>
+          <p className="mt-4 text-slate-200">St. Mary&apos;s Hall</p>
           <p className="text-slate-200">Second Tuesday of each month</p>
           <p className="text-slate-200">6:30 PM Rosary</p>
           <p className="text-slate-200">6:50 PM Meal</p>
