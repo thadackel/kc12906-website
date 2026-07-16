@@ -9,6 +9,9 @@ const reasons = [
   ["Belong", "Build friendships with Catholic men committed to service."],
 ];
 
+const inputClassName =
+  "mt-2 w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm outline-none transition focus:border-blue-700 focus:ring-2 focus:ring-blue-200";
+
 export default function Membership() {
   return (
     <>
@@ -27,6 +30,77 @@ export default function Membership() {
             </div>
           ))}
         </div>
+
+        <section className="mx-auto mt-14 max-w-4xl rounded-3xl border border-slate-200 bg-white p-8 shadow-sm sm:p-10">
+          <p className="text-sm font-black uppercase tracking-widest text-blue-800">
+            Membership Interest Form
+          </p>
+          <h2 className="mt-3 text-3xl font-black text-blue-950">
+            Learn More About Joining
+          </h2>
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-600">
+            Complete the form below and a representative of St. Peter Council 12906
+            will contact you with more information about membership.
+          </p>
+
+          <form
+            action="https://formsubmit.co/12906koc@gmail.com"
+            method="POST"
+            className="mt-8 grid gap-6 md:grid-cols-2"
+          >
+            <input type="hidden" name="_subject" value="New Council 12906 Membership Inquiry" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
+
+            <label className="font-bold text-blue-950">
+              First Name
+              <input className={inputClassName} type="text" name="First Name" required />
+            </label>
+
+            <label className="font-bold text-blue-950">
+              Last Name
+              <input className={inputClassName} type="text" name="Last Name" required />
+            </label>
+
+            <label className="font-bold text-blue-950">
+              Email Address
+              <input className={inputClassName} type="email" name="Email" required />
+            </label>
+
+            <label className="font-bold text-blue-950">
+              Phone Number
+              <input className={inputClassName} type="tel" name="Phone" required />
+            </label>
+
+            <label className="font-bold text-blue-950 md:col-span-2">
+              Parish or Church
+              <input className={inputClassName} type="text" name="Parish or Church" />
+            </label>
+
+            <label className="font-bold text-blue-950 md:col-span-2">
+              Questions or Comments
+              <textarea
+                className={inputClassName}
+                name="Questions or Comments"
+                rows={5}
+                placeholder="Tell us anything you would like us to know."
+              />
+            </label>
+
+            <div className="md:col-span-2">
+              <button
+                type="submit"
+                className="rounded-lg bg-yellow-500 px-8 py-4 text-lg font-black text-blue-950 shadow-sm transition-colors hover:bg-yellow-400 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-950"
+              >
+                Submit Membership Interest
+              </button>
+              <p className="mt-4 text-sm leading-6 text-slate-500">
+                Your information will be sent to the council at 12906koc@gmail.com.
+              </p>
+            </div>
+          </form>
+        </section>
+
         <section className="mt-14 rounded-3xl border border-blue-100 bg-blue-50 p-8 text-center shadow-sm sm:p-10">
           <p className="text-sm font-black uppercase tracking-widest text-blue-800">
             Current Members
