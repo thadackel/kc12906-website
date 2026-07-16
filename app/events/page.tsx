@@ -38,7 +38,7 @@ export default function Events() {
 
         <section className="mx-auto mt-10 max-w-4xl rounded-3xl bg-blue-950 p-8 text-white">
           <h2 className="text-2xl font-black text-yellow-400">Officers Meeting</h2>
-          <p className="mt-4 text-slate-100">Officer meeting details can be added here once confirmed.</p>
+          <p className="mt-4 text-slate-100">First Tuesday of each month 6:30 PM</p>
         </section>
       </main>
       <Footer />
