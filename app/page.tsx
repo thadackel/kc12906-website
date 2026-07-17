@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import SectionTitle from "@/components/SectionTitle";
 import Link from "next/link";
 
+const joinUrl = "https://www.kofc.org/get-involved/join-kofc/";
 const principles = ["Charity", "Unity", "Fraternity", "Patriotism"];
 
 const highlights = [
@@ -47,7 +48,9 @@ export default function Home() {
 
               <div className="mt-9 flex flex-wrap gap-4">
                 <Link
-                  href="/membership"
+                  href={joinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="rounded-lg bg-yellow-500 px-8 py-4 text-lg font-black text-blue-950 hover:bg-yellow-400"
                 >
                   Become a Knight
@@ -153,7 +156,9 @@ export default function Home() {
             brotherhood committed to faith, family, and service.
           </p>
           <Link
-            href="/membership"
+            href={joinUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-8 inline-block rounded-lg bg-yellow-500 px-8 py-4 text-lg font-black text-blue-950 hover:bg-yellow-400"
           >
             Learn About Membership
