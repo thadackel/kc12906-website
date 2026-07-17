@@ -9,7 +9,7 @@ const navItems = [
   { label: "Leadership", href: "/leadership" },
   { label: "Programs", href: "/programs" },
   { label: "Events", href: "/events" },
-  { label: "Membership", href: joinUrl, external: true },
+  { label: "Membership", href: "/membership" },
   { label: "Gallery", href: "/gallery" },
   { label: "Resources", href: "/resources" },
   { label: "Contact", href: "/contact" },
@@ -58,8 +58,6 @@ export default function Header() {
           <Link
             key={item.href}
             href={item.href}
-            target={item.external ? "_blank" : undefined}
-            rel={item.external ? "noopener noreferrer" : undefined}
             className="transition hover:text-yellow-400"
           >
             {item.label}
