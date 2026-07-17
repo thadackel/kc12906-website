@@ -1,13 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
 
+const joinUrl = "https://www.kofc.org/get-involved/join-kofc/";
+
 const navItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Leadership", href: "/leadership" },
   { label: "Programs", href: "/programs" },
   { label: "Events", href: "/events" },
-  { label: "Membership", href: "/membership" },
+  { label: "Membership", href: joinUrl, external: true },
   { label: "Gallery", href: "/gallery" },
   { label: "Resources", href: "/resources" },
   { label: "Contact", href: "/contact" },
@@ -41,7 +43,9 @@ export default function Header() {
           </Link>
 
           <Link
-            href="/membership"
+            href={joinUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden rounded-lg bg-yellow-500 px-6 py-3 text-lg font-black text-blue-950 transition hover:bg-yellow-400 lg:block"
           >
             Become a Knight
@@ -51,7 +55,13 @@ export default function Header() {
 
       <nav className="mx-auto flex max-w-7xl flex-wrap justify-center gap-x-6 gap-y-3 px-6 py-4 text-base font-bold md:gap-x-8 md:px-8 md:text-lg">
         {navItems.map((item) => (
-          <Link key={item.href} href={item.href} className="transition hover:text-yellow-400">
+          <Link
+            key={item.href}
+            href={item.href}
+            target={item.external ? "_blank" : undefined}
+            rel={item.external ? "noopener noreferrer" : undefined}
+            className="transition hover:text-yellow-400"
+          >
             {item.label}
           </Link>
         ))}
