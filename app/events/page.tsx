@@ -1,4 +1,4 @@
-import Footer from "@/components/Footer";
+﻿import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import SectionTitle from "@/components/SectionTitle";
 import Image from "next/image";
@@ -11,7 +11,7 @@ const featuredEvents = [
       "Learn more about our parish BBQ plate events and the fellowship behind every meal.",
     href: "/events/bbq",
 <<<<<<< HEAD
-    image: "/images/events/bbq-placeholder.svg",
+    image: "/images/events/bbq-group.jpg",
     imageAlt: "Knights of Columbus parish barbecue plate event",
 =======
     image: "/images/events/bbq-group.jpg",
@@ -98,3 +98,4 @@ export default function Events() {
     </>
   );
 }
+
