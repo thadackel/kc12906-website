@@ -5,9 +5,10 @@ import { useEffect, useState } from "react";
 type Base64PhotoProps = {
   source: string;
   alt: string;
+  fit?: "cover" | "contain";
 };
 
-export default function Base64Photo({ source, alt }: Base64PhotoProps) {
+export default function Base64Photo({ source, alt, fit = "cover" }: Base64PhotoProps) {
   const [src, setSrc] = useState("");
 
   useEffect(() => {
@@ -34,5 +35,12 @@ export default function Base64Photo({ source, alt }: Base64PhotoProps) {
     return <div className="h-full w-full animate-pulse bg-slate-200" aria-label={`Loading ${alt}`} />;
   }
 
-  return <img src={src} alt={alt} className="h-full w-full object-cover" loading="lazy" />;
+  return (
+    <img
+      src={src}
+      alt={alt}
+      className={`h-full w-full ${fit === "contain" ? "object-contain" : "object-cover"}`}
+      loading="lazy"
+    />
+  );
 }
