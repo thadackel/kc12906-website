@@ -18,10 +18,11 @@ export default function Page() {
             <p className="text-sm font-black uppercase tracking-[0.25em] text-yellow-600">
               Grand Knight
             </p>
-            <div className="mx-auto mt-5 aspect-[4/5] w-full max-w-[240px] overflow-hidden rounded-xl bg-slate-100 shadow-md">
+            <div className="mx-auto mt-5 h-[300px] w-full max-w-[230px] overflow-hidden rounded-xl bg-white shadow-md">
               <Base64Photo
                 source="/images/leadership/gerald-nuss.b64"
                 alt="Gerald Nuss, Grand Knight of Knights of Columbus Council 12906"
+                fit="contain"
               />
             </div>
             <h2 className="mt-5 text-3xl font-black text-blue-950">Gerald Nuss</h2>
