@@ -11,15 +11,32 @@ const featuredEvents = [
       "Learn more about our parish BBQ plate events and the fellowship behind every meal.",
     href: "/events/bbq",
     image: "/images/events/bbq-group.jpg",
-    imageAlt: "Knights of Columbus Council 12906 members serving at a parish barbecue",
+    imageAlt:
+      "Knights of Columbus Council 12906 members serving at a parish barbecue",
   },
   {
     title: "Fish Fries",
     description:
-      "Visit our Fish Fries page for future dates, menus, and parish announcements.",
+      "See Council 12906 members preparing and serving fish fry meals for our parish community.",
     href: "/events/fish-fries",
-    image: "/images/events/fish-fries-placeholder.svg",
-    imageAlt: "Knights of Columbus parish fish fry event",
+    image: "/images/events/fish-fry-hero.jpg",
+    imageAlt: "Council 12906 members serving food at a parish fish fry",
+  },
+  {
+    title: "Free Throw Contest",
+    description:
+      "Celebrating youth participation, sportsmanship, and community fellowship through basketball.",
+    href: "/events/free-throw-contest",
+    image: "/images/events/free-throw-hero.jpg",
+    imageAlt: "Basketball passing through the hoop at the free throw contest",
+  },
+  {
+    title: "Coats for Kids",
+    description:
+      "Council members and volunteers collect and distribute warm coats to children in need.",
+    href: "/events/coats-for-kids",
+    image: "/images/events/coats-for-kids-hero.jpg",
+    imageAlt: "Council 12906 volunteers at the Coats for Kids event",
   },
 ];
 
@@ -34,7 +51,7 @@ export default function Events() {
           subtitle="Stay connected with Council 12906 meetings, parish support, service projects, and fellowship."
         />
 
-        <section className="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
+        <section className="mx-auto mt-12 grid max-w-5xl gap-6 md:grid-cols-2">
           {featuredEvents.map((event) => (
             <Link
               key={event.title}
@@ -47,12 +64,16 @@ export default function Events() {
                   alt={event.imageAlt}
                   fill
                   className="object-cover transition duration-300 group-hover:scale-105"
-                  sizes="(min-width: 768px) 384px, 100vw"
+                  sizes="(min-width: 768px) 480px, 100vw"
                 />
               </div>
               <div className="p-7">
-                <h2 className="text-3xl font-black text-blue-950">{event.title}</h2>
-                <p className="mt-3 leading-7 text-slate-600">{event.description}</p>
+                <h2 className="text-3xl font-black text-blue-950">
+                  {event.title}
+                </h2>
+                <p className="mt-3 leading-7 text-slate-600">
+                  {event.description}
+                </p>
                 <span className="mt-6 inline-flex rounded-full bg-blue-950 px-5 py-3 text-sm font-black uppercase tracking-wider text-white transition group-hover:bg-yellow-500 group-hover:text-blue-950">
                   View {event.title}
                 </span>
@@ -61,14 +82,16 @@ export default function Events() {
           ))}
         </section>
 
-        <section className="mx-auto mt-12 max-w-4xl rounded-3xl border p-8 shadow-sm">
+        <section className="mx-auto mt-12 max-w-5xl rounded-3xl border p-8 shadow-sm">
           <p className="text-sm font-black uppercase tracking-[0.25em] text-yellow-600">
             Monthly General Membership Meeting
           </p>
           <h2 className="mt-3 text-3xl font-black text-blue-950">
             Second Tuesday of Each Month
           </h2>
-          <p className="mt-3 text-lg text-slate-600">Location: St. Mary's Hall</p>
+          <p className="mt-3 text-lg text-slate-600">
+            Location: St. Mary&apos;s Hall
+          </p>
 
           <div className="mt-8 grid gap-4">
             {[
@@ -76,7 +99,10 @@ export default function Events() {
               ["6:50 PM", "Meal"],
               ["7:05 PM", "General Membership Meeting"],
             ].map(([time, item]) => (
-              <div key={time} className="flex items-center justify-between rounded-lg bg-slate-100 p-4">
+              <div
+                key={time}
+                className="flex items-center justify-between rounded-lg bg-slate-100 p-4"
+              >
                 <span className="font-black text-blue-950">{time}</span>
                 <span>{item}</span>
               </div>
@@ -84,9 +110,13 @@ export default function Events() {
           </div>
         </section>
 
-        <section className="mx-auto mt-10 max-w-4xl rounded-3xl bg-blue-950 p-8 text-white">
-          <h2 className="text-2xl font-black text-yellow-400">Officers Meeting</h2>
-          <p className="mt-4 text-slate-100">First Tuesday of each month 6:30 PM</p>
+        <section className="mx-auto mt-10 max-w-5xl rounded-3xl bg-blue-950 p-8 text-white">
+          <h2 className="text-2xl font-black text-yellow-400">
+            Officers Meeting
+          </h2>
+          <p className="mt-4 text-slate-100">
+            First Tuesday of each month at 6:30 PM
+          </p>
         </section>
       </main>
       <Footer />

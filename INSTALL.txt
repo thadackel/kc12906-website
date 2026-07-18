@@ -1,0 +1,17 @@
+KC Council 12906 Events Update
+
+This package adds:
+- Fish Fries photographs and gallery
+- Free Throw Contest event card and page
+- Coats for Kids event card and page
+- Nine event photographs with clean web filenames
+
+Extract this ZIP directly into:
+C:\Users\thada\kc12906-website
+
+Allow Windows to replace existing files when prompted.
+
+Then run:
+git add .
+git commit -m "Add Fish Fries, Free Throw Contest, and Coats for Kids events"
+git push origin main

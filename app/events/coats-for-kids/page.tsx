@@ -5,16 +5,16 @@ import Link from "next/link";
 
 const gallery = [
   {
-    src: "/images/events/fish-fry-cooking.jpg",
-    alt: "Council 12906 members cooking food for a parish fish fry",
+    src: "/images/events/coats-for-kids-volunteers.jpg",
+    alt: "Council 12906 volunteers gathered beside donated coats",
   },
   {
-    src: "/images/events/fish-fry-food.jpg",
-    alt: "Freshly prepared fried fish ready to be served",
+    src: "/images/events/coats-for-kids-sorting.jpg",
+    alt: "Council members sorting coats for children in the community",
   },
 ];
 
-export default function FishFriesPage() {
+export default function CoatsForKidsPage() {
   return (
     <>
       <Header />
@@ -29,8 +29,8 @@ export default function FishFriesPage() {
         <section className="mt-8 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-lg">
           <div className="relative aspect-[16/8] bg-slate-100">
             <Image
-              src="/images/events/fish-fry-hero.jpg"
-              alt="Council 12906 members serving food at a parish fish fry"
+              src="/images/events/coats-for-kids-hero.jpg"
+              alt="Council 12906 volunteers at the Coats for Kids event"
               fill
               priority
               className="object-cover"
@@ -40,24 +40,24 @@ export default function FishFriesPage() {
 
           <div className="p-8 md:p-12">
             <p className="text-sm font-black uppercase tracking-[0.25em] text-yellow-600">
-              Parish Tradition
+              Helping Children in Need
             </p>
             <h1 className="mt-3 text-4xl font-black text-blue-950 md:text-5xl">
-              Council 12906 Fish Fries
+              Coats for Kids
             </h1>
             <div className="mt-6 space-y-5 text-lg leading-8 text-slate-700">
               <p>
-                Council 12906 fish fries bring our Knights together to prepare
-                and serve meals for parishioners, families, and friends.
+                Coats for Kids helps provide warm winter coats to children who
+                need them in our community.
               </p>
               <p>
-                These events are rooted in service, fellowship, and hospitality.
-                Members work side by side cooking, serving, and welcoming the
-                community.
+                Council members and volunteers collect, organize, and distribute
+                coats while working together in the Knights&apos; tradition of
+                charity and service.
               </p>
               <p>
-                Future dates, menus, pricing, and pickup information will be
-                posted here as they become available.
+                Information about future collections, volunteer opportunities,
+                and distribution events will be posted here.
               </p>
             </div>
           </div>
@@ -65,7 +65,7 @@ export default function FishFriesPage() {
 
         <section className="mt-10">
           <h2 className="text-3xl font-black text-blue-950">
-            Fish Fry Photo Gallery
+            Coats for Kids Photo Gallery
           </h2>
           <div className="mt-6 grid gap-6 md:grid-cols-2">
             {gallery.map((photo) => (
