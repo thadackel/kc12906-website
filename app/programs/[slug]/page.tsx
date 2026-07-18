@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import DonateButton from "@/components/DonateButton";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProgram, programs } from "../programData";
@@ -29,6 +30,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
             <p className="mt-6 max-w-3xl text-xl leading-8 text-blue-100">
               {program.summary}
             </p>
+            <DonateButton className="mt-8" />
           </div>
         </section>
 
@@ -51,12 +53,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
           <aside className="rounded-3xl border border-blue-100 bg-blue-50 p-8 shadow-sm">
             <p className="text-sm font-black uppercase tracking-widest text-blue-800">Program Impact</p>
             <p className="mt-4 text-lg leading-8 text-slate-700">{program.impact}</p>
-            <Link
-              href="/contact"
-              className="mt-8 inline-block rounded-lg bg-yellow-500 px-6 py-3 font-black text-blue-950 transition hover:bg-yellow-400"
-            >
-              Get Involved
-            </Link>
+            <DonateButton className="mt-8 w-full" />
           </aside>
         </section>
 
