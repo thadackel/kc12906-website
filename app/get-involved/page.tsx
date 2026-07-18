@@ -4,6 +4,7 @@ import Link from "next/link";
 
 const donationUrl =
   "https://checkout.square.site/merchant/8ZWJ066MCV5W6/checkout/6WE6LGBU3C7O74XS7YGBGSL5";
+const joinUrl = "https://www.kofc.org/get-involved/join-kofc/";
 
 export default function GetInvolvedPage() {
   return (
@@ -23,14 +24,24 @@ export default function GetInvolvedPage() {
             the Covington community.
           </p>
 
-          <Link
-            href={donationUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-9 inline-flex rounded-full bg-yellow-500 px-8 py-4 text-lg font-black text-blue-950 transition hover:bg-yellow-400"
-          >
-            Donate Securely Through Square
-          </Link>
+          <div className="mt-9 flex flex-wrap gap-4">
+            <Link
+              href={donationUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex rounded-full bg-yellow-500 px-8 py-4 text-lg font-black text-blue-950 transition hover:bg-yellow-400"
+            >
+              Donate Securely Through Square
+            </Link>
+            <Link
+              href={joinUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex rounded-full border-2 border-yellow-400 bg-white px-8 py-4 text-lg font-black text-blue-950 transition hover:bg-yellow-50"
+            >
+              Become a Knight
+            </Link>
+          </div>
         </section>
 
         <section className="mt-10 grid gap-6 md:grid-cols-2">
