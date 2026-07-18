@@ -1,6 +1,27 @@
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import SectionTitle from "@/components/SectionTitle";
+import Image from "next/image";
+import Link from "next/link";
+
+const featuredEvents = [
+  {
+    title: "BBQ's",
+    description:
+      "Learn more about our parish BBQ plate events and the fellowship behind every meal.",
+    href: "/events/bbq",
+    image: "/images/events/bbq-placeholder.svg",
+    imageAlt: "Knights of Columbus parish barbecue plate event",
+  },
+  {
+    title: "Fish Fries",
+    description:
+      "Visit our Fish Fries page for future dates, menus, and parish announcements.",
+    href: "/events/fish-fries",
+    image: "/images/events/fish-fries-placeholder.svg",
+    imageAlt: "Knights of Columbus parish fish fry event",
+  },
+];
 
 export default function Events() {
   return (
@@ -12,6 +33,33 @@ export default function Events() {
           title="Events & Meetings"
           subtitle="Stay connected with Council 12906 meetings, parish support, service projects, and fellowship."
         />
+
+        <section className="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
+          {featuredEvents.map((event) => (
+            <Link
+              key={event.title}
+              href={event.href}
+              className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                <Image
+                  src={event.image}
+                  alt={event.imageAlt}
+                  fill
+                  className="object-cover transition duration-300 group-hover:scale-105"
+                  sizes="(min-width: 768px) 384px, 100vw"
+                />
+              </div>
+              <div className="p-7">
+                <h2 className="text-3xl font-black text-blue-950">{event.title}</h2>
+                <p className="mt-3 leading-7 text-slate-600">{event.description}</p>
+                <span className="mt-6 inline-flex rounded-full bg-blue-950 px-5 py-3 text-sm font-black uppercase tracking-wider text-white transition group-hover:bg-yellow-500 group-hover:text-blue-950">
+                  View {event.title}
+                </span>
+              </div>
+            </Link>
+          ))}
+        </section>
 
         <section className="mx-auto mt-12 max-w-4xl rounded-3xl border p-8 shadow-sm">
           <p className="text-sm font-black uppercase tracking-[0.25em] text-yellow-600">
