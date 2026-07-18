@@ -15,6 +15,25 @@ export default function Programs() {
           subtitle="Council 12906 participates in programs that benefit St. Peter Parish and the surrounding community. Select a program to learn more."
         />
 
+        <section className="mt-10 rounded-3xl bg-blue-950 p-8 text-white shadow-lg md:flex md:items-center md:justify-between md:gap-8">
+          <div>
+            <p className="text-sm font-black uppercase tracking-[0.22em] text-yellow-400">
+              Help Make These Programs Possible
+            </p>
+            <h2 className="mt-3 text-3xl font-black">Support Council 12906</h2>
+            <p className="mt-3 max-w-3xl leading-7 text-slate-100">
+              Your donation helps fund charitable outreach, youth activities,
+              parish support, and community service programs.
+            </p>
+          </div>
+          <Link
+            href="/get-involved"
+            className="mt-6 inline-flex shrink-0 rounded-full bg-yellow-500 px-7 py-4 font-black text-blue-950 transition hover:bg-yellow-400 md:mt-0"
+          >
+            Get Involved & Donate
+          </Link>
+        </section>
+
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {programs.map((program) => (
             <Link
