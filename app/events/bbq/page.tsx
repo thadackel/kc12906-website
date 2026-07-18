@@ -1,4 +1,3 @@
-import Base64Photo from "@/components/Base64Photo";
 import DonateButton from "@/components/DonateButton";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -8,12 +7,9 @@ import Link from "next/link";
 const gallery = [
   { src: "/images/events/bbq-cooking.jpg", alt: "Council 12906 Knights preparing barbecue" },
   { src: "/images/events/bbq-team.jpg", alt: "Council 12906 volunteers gathered around the barbecue smoker" },
-];
-
-const newGallery = [
-  { source: "/images/events/bbq-5.b64", alt: "Chicken cooking inside the Council 12906 barbecue smoker" },
-  { source: "/images/events/bbq-6.b64", alt: "Council 12906 volunteers working at the barbecue pit at night" },
-  { source: "/images/events/bbq-7.b64", alt: "Council 12906 Knights preparing barbecue chicken together" },
+  { src: "/api/bbq-photo/5", alt: "Chicken cooking inside the Council 12906 barbecue smoker" },
+  { src: "/api/bbq-photo/6", alt: "Council 12906 volunteers working at the barbecue pit at night" },
+  { src: "/api/bbq-photo/7", alt: "Council 12906 Knights preparing barbecue chicken together" },
 ];
 
 export default function BbqPage() {
@@ -41,15 +37,12 @@ export default function BbqPage() {
           <h2 className="text-3xl font-black text-blue-950">BBQ Photo Gallery</h2>
           <div className="mt-6 grid gap-6 md:grid-cols-2">
             {gallery.map((photo) => (
-              <div key={photo.src} className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-slate-200 bg-slate-100 shadow-md">
-                <Image src={photo.src} alt={photo.alt} fill className="object-cover" sizes="(min-width: 768px) 50vw, 100vw" />
-              </div>
-            ))}
-          </div>
-          <div className="mt-6 grid gap-6 md:grid-cols-3">
-            {newGallery.map((photo) => (
-              <div key={photo.source} className="aspect-[16/9] overflow-hidden rounded-3xl border border-slate-200 bg-slate-100 shadow-md">
-                <Base64Photo source={photo.source} alt={photo.alt} />
+              <div key={photo.src} className="relative aspect-[16/9] overflow-hidden rounded-3xl border border-slate-200 bg-slate-100 shadow-md">
+                {photo.src.startsWith("/api/") ? (
+                  <img src={photo.src} alt={photo.alt} className="h-full w-full object-cover" loading="lazy" />
+                ) : (
+                  <Image src={photo.src} alt={photo.alt} fill className="object-cover" sizes="(min-width: 768px) 50vw, 100vw" />
+                )}
               </div>
             ))}
           </div>
