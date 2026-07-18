@@ -51,6 +51,25 @@ export default function Events() {
           subtitle="Stay connected with Council 12906 meetings, parish support, service projects, and fellowship."
         />
 
+        <section className="mx-auto mt-10 max-w-5xl rounded-3xl bg-blue-950 p-8 text-white shadow-lg md:flex md:items-center md:justify-between md:gap-8">
+          <div>
+            <p className="text-sm font-black uppercase tracking-[0.22em] text-yellow-400">
+              Support Our Events
+            </p>
+            <h2 className="mt-3 text-3xl font-black">Help Council 12906 Serve</h2>
+            <p className="mt-3 max-w-3xl leading-7 text-slate-100">
+              Donations help us continue parish gatherings, youth events, and
+              charitable service throughout the Covington community.
+            </p>
+          </div>
+          <Link
+            href="/get-involved"
+            className="mt-6 inline-flex shrink-0 rounded-full bg-yellow-500 px-7 py-4 font-black text-blue-950 transition hover:bg-yellow-400 md:mt-0"
+          >
+            Get Involved & Donate
+          </Link>
+        </section>
+
         <section className="mx-auto mt-12 grid max-w-5xl gap-6 md:grid-cols-2">
           {featuredEvents.map((event) => (
             <Link
