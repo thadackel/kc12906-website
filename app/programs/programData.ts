@@ -80,6 +80,33 @@ export const programs: Program[] = [
     introduction: "Faith is the foundation of Council 12906. The council encourages members and families to grow closer to Christ through the Rosary, reception of the sacraments, communal worship, spiritual formation, and visible participation in parish life.",
     activities: ["Pray the Rosary before council meetings", "Participate in quarterly corporate Communion", "Encourage Mass attendance and sacramental life", "Offer Catholic formation and opportunities for prayer"],
     impact: "Shared prayer and worship strengthen each Knight, his family, the council, and the wider parish community."
+  },
+  {
+    slug: "eucharistic-adoration",
+    title: "Eucharistic Adoration",
+    category: "Faith",
+    summary: "Support the parish Adoration Chapel through a dedicated weekly hour of prayer.",
+    introduction: "Council 12906 supports Eucharistic Adoration at St. Peter Parish and encourages Knights to spend time in prayer before the Blessed Sacrament. The council’s traditional scheduled hour is Sunday from 3:00 to 4:00 p.m., helping ensure a faithful presence in the Adoration Chapel.",
+    activities: ["Participate in the council’s Sunday Adoration hour", "Pray for the parish, council, families, and vocations", "Encourage members to serve as regular or substitute adorers", "Promote devotion to the Blessed Sacrament"],
+    impact: "A dependable hour of Eucharistic Adoration strengthens the spiritual life of the council and supports continuous prayer within the parish."
+  },
+  {
+    slug: "food-bank-delivery",
+    title: "Food Bank Delivery",
+    category: "Community",
+    summary: "Help deliver food to local families experiencing hardship.",
+    introduction: "Council 12906 assists families in need by helping transport and deliver food provided through local food-bank outreach. Knights volunteer their time and vehicles so groceries and essential food items reach households that may otherwise have difficulty receiving them.",
+    activities: ["Pick up food from local distribution partners", "Deliver groceries to families in need", "Coordinate volunteer drivers and delivery routes", "Support parish and community hunger-relief efforts"],
+    impact: "Reliable food delivery provides immediate help, preserves dignity, and connects families with a caring parish community."
+  },
+  {
+    slug: "little-pantry-support",
+    title: "St. Peter Little Pantry Support",
+    category: "Community",
+    summary: "Keep the parish Little Pantry stocked for neighbors who need immediate food assistance.",
+    introduction: "Council 12906 contributes food and volunteer support to the St. Peter Little Pantry ministry. This simple, accessible resource allows individuals and families to receive basic food items when they need help, while giving parishioners a direct way to practice charity.",
+    activities: ["Collect nonperishable food donations", "Restock the St. Peter Little Pantry", "Promote pantry needs to council members", "Coordinate support with parish volunteers"],
+    impact: "A well-stocked Little Pantry offers practical, immediate assistance and reminds neighbors that they are not forgotten."
   }
 ];
 
