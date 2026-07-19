@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { programs } from "@/app/programs/programData";
 
 const joinUrl = "https://www.kofc.org/get-involved/join-kofc/";
 
@@ -7,7 +8,6 @@ const navItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Leadership", href: "/leadership" },
-  { label: "Programs", href: "/programs" },
   { label: "Events", href: "/events" },
   { label: "Get Involved", href: "/get-involved" },
   { label: "Membership", href: "/membership" },
@@ -54,8 +54,46 @@ export default function Header() {
         </div>
       </div>
 
-      <nav className="mx-auto flex max-w-7xl flex-wrap justify-center gap-x-6 gap-y-3 px-6 py-4 text-base font-bold md:gap-x-8 md:px-8 md:text-lg">
-        {navItems.map((item) => (
+      <nav className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-6 gap-y-3 px-6 py-4 text-base font-bold md:gap-x-8 md:px-8 md:text-lg">
+        {navItems.slice(0, 3).map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            className="transition hover:text-yellow-400"
+          >
+            {item.label}
+          </Link>
+        ))}
+
+        <details className="group relative">
+          <summary className="cursor-pointer list-none transition hover:text-yellow-400 [&::-webkit-details-marker]:hidden">
+            <span className="inline-flex items-center gap-1">
+              Programs
+              <span aria-hidden="true" className="text-sm transition group-open:rotate-180">▼</span>
+            </span>
+          </summary>
+          <div className="absolute left-1/2 z-50 mt-3 max-h-[70vh] w-80 -translate-x-1/2 overflow-y-auto rounded-2xl border border-blue-800 bg-white p-3 text-base text-blue-950 shadow-2xl">
+            <Link
+              href="/programs"
+              className="block rounded-xl bg-blue-950 px-4 py-3 font-black text-white transition hover:bg-blue-900"
+            >
+              All Programs — Central Hub
+            </Link>
+            <div className="mt-2 grid gap-1">
+              {programs.map((program) => (
+                <Link
+                  key={program.slug}
+                  href={`/programs/${program.slug}`}
+                  className="rounded-lg px-4 py-2.5 font-bold transition hover:bg-yellow-100 hover:text-blue-900"
+                >
+                  {program.title}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </details>
+
+        {navItems.slice(3).map((item) => (
           <Link
             key={item.href}
             href={item.href}
