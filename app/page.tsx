@@ -4,6 +4,8 @@ import SectionTitle from "@/components/SectionTitle";
 import Link from "next/link";
 
 const joinUrl = "https://www.kofc.org/get-involved/join-kofc/";
+const facebookUrl =
+  "https://www.facebook.com/p/St-Peter-Knights-of-Columbus-covington-61568291579406/";
 const principles = ["Charity", "Unity", "Fraternity", "Patriotism"];
 
 const highlights = [
@@ -146,6 +148,39 @@ export default function Home() {
                 ))}
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="bg-slate-100 px-6 py-20">
+          <div className="mx-auto max-w-5xl rounded-3xl bg-white p-10 text-center shadow-lg md:p-14">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-700 text-white">
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                className="h-9 w-9 fill-current"
+              >
+                <path d="M13.7 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.3-1.5 1.6-1.5H17V4.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.5V14h2.8v8h3.4Z" />
+              </svg>
+            </div>
+            <p className="mt-6 text-sm font-black uppercase tracking-[0.25em] text-blue-700">
+              Stay Connected
+            </p>
+            <h2 className="mt-3 text-4xl font-black text-blue-950">
+              Follow Council 12906 on Facebook
+            </h2>
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">
+              See recent photos, event reminders, parish service projects, and
+              council announcements from St. Peter Knights of Columbus.
+            </p>
+            <Link
+              href={facebookUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center gap-3 rounded-lg bg-blue-700 px-8 py-4 text-lg font-black text-white transition hover:bg-blue-800"
+            >
+              Visit Our Facebook Page
+              <span aria-hidden="true">↗</span>
+            </Link>
           </div>
         </section>
 
