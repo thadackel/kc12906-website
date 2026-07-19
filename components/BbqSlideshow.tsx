@@ -3,8 +3,12 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const photos = Array.from({ length: 115 }, (_, index) => ({
-  src: `/images/events/bbq-slideshow/${String(index + 1).padStart(3, "0")}.jpg`,
+const photoNumbers = Array.from({ length: 116 }, (_, index) => index + 1).filter(
+  (number) => number !== 50,
+);
+
+const photos = photoNumbers.map((number, index) => ({
+  src: `/images/events/bbq-slideshow/${String(number).padStart(3, "0")}.jpg`,
   alt: `Council 12906 Chicken BBQ highlight ${index + 1}`,
 }));
 
