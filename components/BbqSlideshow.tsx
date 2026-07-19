@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 const selectedPhotoFiles = [
   "001",
@@ -38,51 +38,19 @@ const photos = selectedPhotoFiles.map((file, index) => ({
 export default function BbqSlideshow() {
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const touchStartX = useRef<number | null>(null);
-
-  const showPhoto = (index: number) => {
-    setCurrent((index + photos.length) % photos.length);
-  };
 
   useEffect(() => {
-    if (paused || lightboxOpen) return;
+    if (paused) return;
 
     const timer = window.setInterval(() => {
       setCurrent((photo) => (photo + 1) % photos.length);
     }, 4000);
 
     return () => window.clearInterval(timer);
-  }, [paused, lightboxOpen]);
+  }, [paused]);
 
-  useEffect(() => {
-    if (!lightboxOpen) return;
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setLightboxOpen(false);
-      if (event.key === "ArrowLeft") showPhoto(current - 1);
-      if (event.key === "ArrowRight") showPhoto(current + 1);
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [current, lightboxOpen]);
-
-  const handleTouchStart = (event: React.TouchEvent) => {
-    touchStartX.current = event.touches[0]?.clientX ?? null;
-  };
-
-  const handleTouchEnd = (event: React.TouchEvent) => {
-    if (touchStartX.current === null) return;
-
-    const endX = event.changedTouches[0]?.clientX ?? touchStartX.current;
-    const distance = endX - touchStartX.current;
-
-    if (Math.abs(distance) > 50) {
-      showPhoto(distance > 0 ? current - 1 : current + 1);
-    }
-
-    touchStartX.current = null;
+  const showPhoto = (index: number) => {
+    setCurrent((index + photos.length) % photos.length);
   };
 
   return (
@@ -110,31 +78,22 @@ export default function BbqSlideshow() {
       </div>
 
       <div
-        className="relative mt-6 aspect-[16/9] touch-pan-y overflow-hidden rounded-3xl border border-slate-200 bg-slate-950 shadow-xl"
+        className="relative mt-6 aspect-[16/9] overflow-hidden rounded-3xl border border-slate-200 bg-slate-950 shadow-xl"
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
-        onTouchStart={handleTouchStart}
-        onTouchEnd={handleTouchEnd}
       >
         {photos.map((photo, index) => (
-          <button
+          <img
             key={photo.src}
-            type="button"
-            onClick={() => setLightboxOpen(true)}
-            aria-label={`Open BBQ photo ${index + 1} full screen`}
-            className={`absolute inset-0 h-full w-full transition-opacity duration-1000 ${
-              index === current ? "opacity-100" : "pointer-events-none opacity-0"
+            src={photo.src}
+            alt={photo.alt}
+            loading={index === 0 ? "eager" : "lazy"}
+            className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-1000 ${
+              index === current
+                ? "opacity-100"
+                : "pointer-events-none opacity-0"
             }`}
-          >
-            <img
-              src={photo.src}
-              alt={photo.alt}
-              loading={index < 2 ? "eager" : "lazy"}
-              className={`h-full w-full object-contain transition-transform duration-[4000ms] ease-linear ${
-                index === current ? "scale-105" : "scale-100"
-              }`}
-            />
-          </button>
+          />
         ))}
 
         <button
@@ -160,7 +119,10 @@ export default function BbqSlideshow() {
         </div>
       </div>
 
-      <div className="mt-5 flex gap-3 overflow-x-auto pb-2" aria-label="Choose a BBQ photo">
+      <div
+        className="mt-5 flex gap-3 overflow-x-auto pb-2"
+        aria-label="Choose a BBQ photo"
+      >
         {photos.map((photo, index) => (
           <button
             key={photo.src}
@@ -169,7 +131,7 @@ export default function BbqSlideshow() {
             aria-label={`Show BBQ photo ${index + 1}`}
             className={`relative h-16 w-24 flex-none overflow-hidden rounded-lg border-2 transition ${
               index === current
-                ? "scale-105 border-yellow-500"
+                ? "border-yellow-500"
                 : "border-transparent opacity-70 hover:opacity-100"
             }`}
           >
@@ -182,60 +144,6 @@ export default function BbqSlideshow() {
           </button>
         ))}
       </div>
-
-      {lightboxOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Full-screen BBQ photo"
-          onClick={() => setLightboxOpen(false)}
-        >
-          <button
-            type="button"
-            onClick={() => setLightboxOpen(false)}
-            aria-label="Close full-screen photo"
-            className="absolute right-5 top-5 z-20 rounded-full bg-white/15 px-4 py-2 text-3xl font-bold text-white hover:bg-white/25"
-          >
-            ×
-          </button>
-
-          <button
-            type="button"
-            onClick={(event) => {
-              event.stopPropagation();
-              showPhoto(current - 1);
-            }}
-            aria-label="Previous full-screen photo"
-            className="absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/15 px-4 py-3 text-3xl font-bold text-white hover:bg-white/25"
-          >
-            ‹
-          </button>
-
-          <img
-            src={photos[current].src}
-            alt={photos[current].alt}
-            className="max-h-[90vh] max-w-[92vw] object-contain"
-            onClick={(event) => event.stopPropagation()}
-          />
-
-          <button
-            type="button"
-            onClick={(event) => {
-              event.stopPropagation();
-              showPhoto(current + 1);
-            }}
-            aria-label="Next full-screen photo"
-            className="absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/15 px-4 py-3 text-3xl font-bold text-white hover:bg-white/25"
-          >
-            ›
-          </button>
-
-          <div className="absolute bottom-5 rounded-full bg-white/15 px-4 py-2 text-sm font-bold text-white">
-            {current + 1} / {photos.length}
-          </div>
-        </div>
-      )}
     </section>
   );
 }
