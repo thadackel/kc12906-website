@@ -1,14 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const photoNumbers = Array.from({ length: 116 }, (_, index) => index + 1).filter(
-  (number) => number !== 50,
-);
-
-const photos = photoNumbers.map((number, index) => ({
-  src: `/images/events/bbq-slideshow/${String(number).padStart(3, "0")}.jpg`,
+const photos = Array.from({ length: 115 }, (_, index) => ({
+  src: `/images/events/bbq-slideshow/${String(index + 1).padStart(3, "0")}.jpg`,
   alt: `Council 12906 Chicken BBQ highlight ${index + 1}`,
 }));
 
@@ -60,16 +55,13 @@ export default function BbqSlideshow() {
         onMouseLeave={() => setPaused(false)}
       >
         {photos.map((photo, index) => (
-          <Image
+          <img
             key={photo.src}
             src={photo.src}
             alt={photo.alt}
-            fill
-            sizes="(min-width: 1024px) 1024px, 100vw"
-            className={`object-contain transition-opacity duration-700 ${
+            className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-700 ${
               index === current ? "opacity-100" : "pointer-events-none opacity-0"
             }`}
-            priority={index === 0}
           />
         ))}
 
