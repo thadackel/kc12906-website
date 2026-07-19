@@ -3,8 +3,8 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const photos = Array.from({ length: 25 }, (_, index) => ({
-  src: `/images/events/bbq-slideshow/${String(index + 1).padStart(2, "0")}.jpg`,
+const photos = Array.from({ length: 115 }, (_, index) => ({
+  src: `/images/events/bbq-slideshow/${String(index + 1).padStart(3, "0")}.jpg`,
   alt: `Council 12906 Chicken BBQ highlight ${index + 1}`,
 }));
 
@@ -37,7 +37,7 @@ export default function BbqSlideshow() {
             BBQ Photo Slideshow
           </h2>
           <p className="mt-2 text-slate-600">
-            Twenty-five varied highlights from Council 12906&apos;s Chicken BBQ.
+            Highlights from Council 12906&apos;s Chicken BBQ.
           </p>
         </div>
 
