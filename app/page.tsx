@@ -1,4 +1,4 @@
-﻿import Header from "@/components/Header";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SectionTitle from "@/components/SectionTitle";
 import Link from "next/link";
@@ -26,17 +26,14 @@ export default function Home() {
       <Header />
 
       <main>
-        <section className="relative overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 px-6 py-24 text-white md:py-32">
+        <section className="relative overflow-hidden bg-blue-950 px-6 py-24 text-white md:py-32">
           <div
             aria-hidden="true"
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-25"
+            className="absolute inset-0 bg-cover bg-[center_32%] bg-no-repeat opacity-45"
             style={{ backgroundImage: "url('/images/home/eucharist-hero.webp')" }}
           />
-          <div aria-hidden="true" className="absolute inset-0 bg-blue-950/70" />
-<div className="absolute inset-0 opacity-10">
-            <div className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-yellow-400 blur-3xl" />
-            <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-white blur-3xl" />
-          </div>
+          <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-blue-950/65 to-blue-950/55" />
+          <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-blue-950/55 via-transparent to-blue-950/25" />
 
           <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
             <div>
@@ -44,11 +41,11 @@ export default function Home() {
                 St. Peter Council 12906
               </p>
 
-              <h1 className="mt-6 text-5xl font-black leading-tight md:text-7xl">
+              <h1 className="mt-6 text-5xl font-black leading-tight drop-shadow-lg md:text-7xl">
                 Catholic men serving Covington.
               </h1>
 
-              <p className="mt-6 max-w-3xl text-xl leading-9 text-slate-100">
+              <p className="mt-6 max-w-3xl text-xl leading-9 text-slate-100 drop-shadow-md">
                 Knights of Columbus Council 12906 serves St. Peter Parish and
                 the Covington community through faith, fellowship, charity, and
                 brotherhood.
@@ -73,7 +70,7 @@ export default function Home() {
               </div>
             </div>
 
-            <aside className="rounded-3xl border border-blue-700 bg-white/10 p-8 shadow-2xl backdrop-blur">
+            <aside className="rounded-3xl border border-white/25 bg-blue-950/55 p-8 shadow-2xl backdrop-blur-sm">
               <p className="text-sm font-black uppercase tracking-[0.25em] text-yellow-400">
                 Monthly Council Meeting
               </p>
@@ -82,9 +79,9 @@ export default function Home() {
               <p className="mt-4 text-xl">St. Mary&apos;s Hall</p>
 
               <div className="mt-8 grid gap-4 text-lg">
-                <div className="rounded-xl bg-white/10 p-4"><strong>6:30 PM</strong> â€” Rosary</div>
-                <div className="rounded-xl bg-white/10 p-4"><strong>6:50 PM</strong> â€” Meal</div>
-                <div className="rounded-xl bg-white/10 p-4"><strong>7:05 PM</strong> â€” General Membership Meeting</div>
+                <div className="rounded-xl bg-white/10 p-4"><strong>6:30 PM</strong> — Rosary</div>
+                <div className="rounded-xl bg-white/10 p-4"><strong>6:50 PM</strong> — Meal</div>
+                <div className="rounded-xl bg-white/10 p-4"><strong>7:05 PM</strong> — General Membership Meeting</div>
               </div>
 
               <p className="mt-7 text-slate-200">Grand Knight: <strong>Gerald Nuss</strong></p>
@@ -185,7 +182,7 @@ export default function Home() {
               className="mt-8 inline-flex items-center gap-3 rounded-lg bg-blue-700 px-8 py-4 text-lg font-black text-white transition hover:bg-blue-800"
             >
               Visit Our Facebook Page
-              <span aria-hidden="true">â†—</span>
+              <span aria-hidden="true">↗</span>
             </Link>
           </div>
         </section>
@@ -211,4 +208,3 @@ export default function Home() {
     </>
   );
 }
-
