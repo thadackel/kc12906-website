@@ -26,7 +26,7 @@ export default function Home() {
       <Header />
 
       <main>
-        <section className="relative overflow-hidden bg-blue-950 px-6 py-24 text-white md:py-32">
+        <section className="home-hero relative overflow-hidden bg-blue-950 px-6 py-24 text-white md:py-32">
           <div
             aria-hidden="true"
             className="absolute inset-0 bg-cover bg-[center_12%] bg-no-repeat opacity-45"
