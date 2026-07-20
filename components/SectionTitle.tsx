@@ -8,7 +8,7 @@ export default function SectionTitle({
   subtitle?: string;
 }) {
   return (
-    <div className="mx-auto max-w-3xl text-center">
+    <div className="section-title mx-auto max-w-3xl text-center">
       {eyebrow && (
         <p className="text-sm font-black uppercase tracking-[0.28em] text-yellow-600">
           {eyebrow}
