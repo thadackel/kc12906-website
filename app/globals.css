@@ -24,16 +24,23 @@ a {
   color: #172554;
 }
 
-/* Shared Eucharist treatment for the first hero section on every interior page. */
-main > section:first-child:not(.home-hero) {
+/* Interior pages whose heading is a SectionTitle component. */
+main:not(:has(.home-hero)) > .section-title:first-child {
   position: relative;
   isolation: isolate;
   overflow: hidden;
+  width: calc(100% + 3rem);
+  max-width: none;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  margin-top: -4rem;
+  margin-bottom: 3rem;
+  padding: 5.5rem 1.5rem;
   background-color: #172554;
   color: #ffffff;
 }
 
-main > section:first-child:not(.home-hero)::before {
+main:not(:has(.home-hero)) > .section-title:first-child::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -41,20 +48,61 @@ main > section:first-child:not(.home-hero)::before {
   background-image: url("/images/home/eucharist-hero.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center 62%;
-  opacity: 0.42;
+  background-position: center 50%;
+  opacity: 0.45;
 }
 
-main > section:first-child:not(.home-hero)::after {
+main:not(:has(.home-hero)) > .section-title:first-child::after {
   content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(90deg, rgba(23, 37, 84, 0.88), rgba(23, 37, 84, 0.62), rgba(23, 37, 84, 0.72)),
-    linear-gradient(0deg, rgba(23, 37, 84, 0.48), transparent 55%, rgba(23, 37, 84, 0.28));
+    linear-gradient(90deg, rgba(23, 37, 84, 0.84), rgba(23, 37, 84, 0.62), rgba(23, 37, 84, 0.72)),
+    linear-gradient(0deg, rgba(23, 37, 84, 0.5), transparent 55%, rgba(23, 37, 84, 0.3));
 }
 
-main > section:first-child:not(.home-hero) :is(h1, h2, h3, p, a, span) {
+main:not(:has(.home-hero)) > .section-title:first-child p:first-child {
+  color: #facc15;
+}
+
+main:not(:has(.home-hero)) > .section-title:first-child h2,
+main:not(:has(.home-hero)) > .section-title:first-child p:not(:first-child) {
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.55);
+}
+
+/* Interior pages that already begin with a custom section hero. */
+main:not(:has(.home-hero)) > section:first-child {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: #172554;
+  color: #ffffff;
+}
+
+main:not(:has(.home-hero)) > section:first-child::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image: url("/images/home/eucharist-hero.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 50%;
+  opacity: 0.45;
+}
+
+main:not(:has(.home-hero)) > section:first-child::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(23, 37, 84, 0.84), rgba(23, 37, 84, 0.62), rgba(23, 37, 84, 0.72)),
+    linear-gradient(0deg, rgba(23, 37, 84, 0.5), transparent 55%, rgba(23, 37, 84, 0.3));
+}
+
+main:not(:has(.home-hero)) > section:first-child :is(h1, h2, h3, p, a, span) {
   position: relative;
 }
