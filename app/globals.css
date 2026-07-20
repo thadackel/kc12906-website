@@ -23,3 +23,38 @@ a {
   background: #eab308;
   color: #172554;
 }
+
+/* Shared Eucharist treatment for the first hero section on every interior page. */
+main > section:first-child:not(.home-hero) {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: #172554;
+  color: #ffffff;
+}
+
+main > section:first-child:not(.home-hero)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image: url("/images/home/eucharist-hero.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 62%;
+  opacity: 0.42;
+}
+
+main > section:first-child:not(.home-hero)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(23, 37, 84, 0.88), rgba(23, 37, 84, 0.62), rgba(23, 37, 84, 0.72)),
+    linear-gradient(0deg, rgba(23, 37, 84, 0.48), transparent 55%, rgba(23, 37, 84, 0.28));
+}
+
+main > section:first-child:not(.home-hero) :is(h1, h2, h3, p, a, span) {
+  position: relative;
+}
