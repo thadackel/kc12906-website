@@ -29,7 +29,7 @@ export default function Home() {
         <section className="relative overflow-hidden bg-blue-950 px-6 py-24 text-white md:py-32">
           <div
             aria-hidden="true"
-            className="absolute inset-0 bg-cover bg-[center_32%] bg-no-repeat opacity-45"
+            className="absolute inset-0 bg-cover bg-[center_12%] bg-no-repeat opacity-45"
             style={{ backgroundImage: "url('/images/home/eucharist-hero.webp')" }}
           />
           <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-blue-950/65 to-blue-950/55" />
