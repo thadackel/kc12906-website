@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+﻿import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SectionTitle from "@/components/SectionTitle";
 import Link from "next/link";
@@ -27,7 +27,13 @@ export default function Home() {
 
       <main>
         <section className="relative overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 px-6 py-24 text-white md:py-32">
-          <div className="absolute inset-0 opacity-10">
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-25"
+            style={{ backgroundImage: "url('/images/home/eucharist-hero.webp')" }}
+          />
+          <div aria-hidden="true" className="absolute inset-0 bg-blue-950/70" />
+<div className="absolute inset-0 opacity-10">
             <div className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-yellow-400 blur-3xl" />
             <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-white blur-3xl" />
           </div>
@@ -76,9 +82,9 @@ export default function Home() {
               <p className="mt-4 text-xl">St. Mary&apos;s Hall</p>
 
               <div className="mt-8 grid gap-4 text-lg">
-                <div className="rounded-xl bg-white/10 p-4"><strong>6:30 PM</strong> — Rosary</div>
-                <div className="rounded-xl bg-white/10 p-4"><strong>6:50 PM</strong> — Meal</div>
-                <div className="rounded-xl bg-white/10 p-4"><strong>7:05 PM</strong> — General Membership Meeting</div>
+                <div className="rounded-xl bg-white/10 p-4"><strong>6:30 PM</strong> â€” Rosary</div>
+                <div className="rounded-xl bg-white/10 p-4"><strong>6:50 PM</strong> â€” Meal</div>
+                <div className="rounded-xl bg-white/10 p-4"><strong>7:05 PM</strong> â€” General Membership Meeting</div>
               </div>
 
               <p className="mt-7 text-slate-200">Grand Knight: <strong>Gerald Nuss</strong></p>
@@ -179,7 +185,7 @@ export default function Home() {
               className="mt-8 inline-flex items-center gap-3 rounded-lg bg-blue-700 px-8 py-4 text-lg font-black text-white transition hover:bg-blue-800"
             >
               Visit Our Facebook Page
-              <span aria-hidden="true">↗</span>
+              <span aria-hidden="true">â†—</span>
             </Link>
           </div>
         </section>
@@ -205,3 +211,4 @@ export default function Home() {
     </>
   );
 }
+
