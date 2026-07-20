@@ -48,7 +48,7 @@ main:not(:has(.home-hero)) > .section-title:first-child::before {
   background-image: url("/images/home/eucharist-hero.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center 50%;
+  background-position: center 12%;
   opacity: 0.45;
 }
 
@@ -89,7 +89,7 @@ main:not(:has(.home-hero)) > section:first-child::before {
   background-image: url("/images/home/eucharist-hero.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center 50%;
+  background-position: center 12%;
   opacity: 0.45;
 }
 
