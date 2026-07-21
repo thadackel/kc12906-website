@@ -1,0 +1,1 @@
+Binary homepage image assets are managed directly in the repository.
