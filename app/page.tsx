@@ -138,7 +138,7 @@ export default function Home() {
                     <img
                       src={principle.image}
                       alt="Knights of Columbus unity ceremony"
-                      className="aspect-[4/3] w-full object-cover"
+                      className="aspect-[4/3] w-full object-cover object-[center_20%]"
                     />
                   </div>
                 ) : null}
