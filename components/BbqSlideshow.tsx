@@ -35,6 +35,8 @@ const photos = selectedPhotoFiles.map((file, index) => ({
   alt: `Council 12906 Chicken BBQ highlight ${index + 1}`,
 }));
 
+const SLIDE_INTERVAL_MS = 1750;
+
 export default function BbqSlideshow() {
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -44,7 +46,7 @@ export default function BbqSlideshow() {
 
     const timer = window.setInterval(() => {
       setCurrent((photo) => (photo + 1) % photos.length);
-    }, 4000);
+    }, SLIDE_INTERVAL_MS);
 
     return () => window.clearInterval(timer);
   }, [paused]);
