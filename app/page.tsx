@@ -72,7 +72,7 @@ export default function Home() {
         </section>
 
         <section aria-label="Decorative altar artwork at St. Peter Parish" className="relative h-36 min-h-36 w-full overflow-hidden bg-blue-950 sm:h-44 md:h-52 lg:h-56">
-          <img src="/images/home/altar-banner.jpg?v=5" alt="Decorative altar artwork at St. Peter Parish" className="absolute inset-0 h-full w-full object-cover object-center" />
+          <img src="/images/home/altar-banner.jpg?v=6" alt="Decorative altar artwork at St. Peter Parish" className="block h-full w-full object-cover object-center" />
           <div aria-hidden="true" className="absolute inset-0 bg-blue-950/10" />
         </section>
 
