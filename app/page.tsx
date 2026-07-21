@@ -6,7 +6,26 @@ import Link from "next/link";
 const joinUrl = "https://www.kofc.org/get-involved/join-kofc/";
 const facebookUrl =
   "https://www.facebook.com/p/St-Peter-Knights-of-Columbus-covington-61568291579406/";
-const principles = ["Charity", "Unity", "Fraternity", "Patriotism"];
+
+const principles = [
+  {
+    title: "Faith",
+    text: "We are Catholic men who lead, serve, protect, and defend our faith. Through prayer, the sacraments, and devotion, we grow in holiness and strengthen Christ's Church.",
+  },
+  {
+    title: "Family",
+    text: "We believe strong families are the foundation of a strong society. We commit ourselves to loving, protecting, and supporting our families in every stage of life.",
+  },
+  {
+    title: "Charity",
+    text: "We serve our neighbor in need by putting charity into action. Through our works of mercy and volunteer service, we reflect Christ's love throughout our parish and community.",
+  },
+  {
+    title: "Unity",
+    text: "Together we accomplish far more than any one man could alone. United in faith, friendship, and purpose, we support one another as brothers while serving our parish, our families, and our community.",
+    image: "/images/home/KC%20Unity.jpg",
+  },
+];
 
 const highlights = [
   ["Parish Support", "Supporting clergy, parish ministries, liturgies, and Catholic life at St. Peter Parish."],
@@ -89,6 +108,15 @@ export default function Home() {
           </div>
         </section>
 
+        <div className="relative h-36 w-full overflow-hidden bg-blue-950 sm:h-44 md:h-52 lg:h-56">
+          <img
+            src="/images/home/Alter.jpg"
+            alt="Decorative altar artwork at St. Peter Parish"
+            className="h-full w-full object-cover object-center"
+          />
+          <div aria-hidden="true" className="absolute inset-0 bg-blue-950/10" />
+        </div>
+
         <section className="mx-auto max-w-7xl px-6 py-20">
           <SectionTitle
             eyebrow="Faith in Action"
@@ -98,8 +126,22 @@ export default function Home() {
 
           <div className="mt-14 grid gap-6 md:grid-cols-4">
             {principles.map((principle) => (
-              <div key={principle} className="rounded-2xl border bg-white p-8 text-center shadow-sm">
-                <h3 className="text-2xl font-black text-blue-950">{principle}</h3>
+              <div
+                key={principle.title}
+                className="flex h-full flex-col rounded-2xl border bg-white p-8 text-center shadow-sm"
+              >
+                <h3 className="text-2xl font-black text-blue-950">{principle.title}</h3>
+                <p className="mt-4 leading-7 text-slate-600">{principle.text}</p>
+
+                {principle.image ? (
+                  <div className="mt-6 overflow-hidden rounded-xl border border-slate-200 bg-slate-100">
+                    <img
+                      src={principle.image}
+                      alt="Knights of Columbus unity ceremony"
+                      className="aspect-[4/3] w-full object-cover"
+                    />
+                  </div>
+                ) : null}
               </div>
             ))}
           </div>
