@@ -108,14 +108,11 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="relative h-36 w-full overflow-hidden bg-blue-950 sm:h-44 md:h-52 lg:h-56">
-          <img
-            src="/images/home/altar-banner.jpg"
-            alt="Decorative altar artwork at St. Peter Parish"
-            className="h-full w-full object-cover object-center"
-          />
-          <div aria-hidden="true" className="absolute inset-0 bg-blue-950/10" />
-        </div>
+        <section
+          aria-label="Decorative altar artwork at St. Peter Parish"
+          className="h-36 min-h-36 w-full bg-blue-950 bg-cover bg-center bg-no-repeat sm:h-44 md:h-52 lg:h-56"
+          style={{ backgroundImage: "url('/images/home/altar-banner.jpg?v=3')" }}
+        />
 
         <section className="mx-auto max-w-7xl px-6 py-20">
           <SectionTitle
