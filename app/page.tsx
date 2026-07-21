@@ -12,34 +12,34 @@ const principles = [
   {
     title: "Faith",
     text: "We are Catholic men who lead, serve, protect, and defend our faith. Through prayer, the sacraments, and devotion, we grow in holiness and strengthen Christ's Church.",
-    image: "/images/home/faith-thumbnail.jpg?v=6",
+    image: "/images/home/faith-thumbnail.jpg?v=5",
     imageAlt: "Priest elevating the Eucharist above a chalice",
     imagePosition: "object-center",
-    imageType: "regular",
+    base64: false,
   },
   {
     title: "Family",
     text: "We believe strong families are the foundation of a strong society. We commit ourselves to loving, protecting, and supporting our families in every stage of life.",
-    image: "/images/home/family-thumbnail-mockup.jpg?v=1",
-    imageAlt: "Two family scenes representing Catholic family life",
+    image: "/images/home/family-thumbnail-mockup.jpg?v=5",
+    imageAlt: "A family together and a father playing with his child",
     imagePosition: "object-center",
-    imageType: "base64",
+    base64: true,
   },
   {
     title: "Charity",
     text: "We serve our neighbor in need by putting charity into action. Through our works of mercy and volunteer service, we reflect Christ's love throughout our parish and community.",
-    image: "/images/home/charity-thumbnail-mockup.jpg?v=1",
-    imageAlt: "Two charity scenes showing service and support for neighbors",
+    image: "/images/home/charity-thumbnail-mockup.jpg?v=5",
+    imageAlt: "Knights serving food and supporting a fellow community member",
     imagePosition: "object-center",
-    imageType: "base64",
+    base64: true,
   },
   {
     title: "Unity",
     text: "Together we accomplish far more than any one man could alone. United in faith, friendship, and purpose, we support one another as brothers while serving our parish, our families, and our community.",
-    image: "/images/home/unity-thumbnail.jpg",
+    image: "/images/home/unity-thumbnail.jpg?v=5",
     imageAlt: "Knights of Columbus unity ceremony",
     imagePosition: "object-[center_20%]",
-    imageType: "regular",
+    base64: false,
   },
 ];
 
@@ -88,7 +88,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section aria-label="Decorative altar artwork at St. Peter Parish" className="h-36 min-h-36 w-full bg-blue-950 bg-cover bg-center bg-no-repeat sm:h-44 md:h-52 lg:h-56" style={{ backgroundImage: "url('/images/home/altar-banner.jpg?v=3')" }} />
+        <section aria-label="Decorative altar artwork at St. Peter Parish" className="relative h-36 min-h-36 w-full overflow-hidden bg-blue-950 sm:h-44 md:h-52 lg:h-56">
+          <img src="/images/home/altar-banner.jpg?v=5" alt="Decorative altar artwork at St. Peter Parish" className="absolute inset-0 h-full w-full object-cover object-center" />
+          <div aria-hidden="true" className="absolute inset-0 bg-blue-950/10" />
+        </section>
 
         <section className="mx-auto max-w-7xl px-6 py-20">
           <SectionTitle eyebrow="Faith in Action" title="Charity, unity, fraternity, and patriotism" subtitle="Council 12906 brings Catholic men together to support parish life, serve neighbors in need, strengthen families, and build lasting fellowship." />
@@ -98,7 +101,7 @@ export default function Home() {
                 <h3 className="text-2xl font-black text-blue-950">{principle.title}</h3>
                 <p className="mt-4 leading-7 text-slate-600">{principle.text}</p>
                 <div className="mt-6 overflow-hidden rounded-xl border border-slate-200 bg-slate-100">
-                  {principle.imageType === "base64" ? (
+                  {principle.base64 ? (
                     <Base64Image source={principle.image} alt={principle.imageAlt} className={`aspect-[4/3] w-full object-cover ${principle.imagePosition}`} />
                   ) : (
                     <img src={principle.image} alt={principle.imageAlt} className={`aspect-[4/3] w-full object-cover ${principle.imagePosition}`} />
