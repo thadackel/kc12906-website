@@ -23,7 +23,7 @@ const principles = [
   {
     title: "Unity",
     text: "Together we accomplish far more than any one man could alone. United in faith, friendship, and purpose, we support one another as brothers while serving our parish, our families, and our community.",
-    image: "/images/home/KC%20Unity.jpg",
+    image: "/images/home/unity-thumbnail.jpg",
   },
 ];
 
@@ -110,7 +110,7 @@ export default function Home() {
 
         <div className="relative h-36 w-full overflow-hidden bg-blue-950 sm:h-44 md:h-52 lg:h-56">
           <img
-            src="/images/home/Alter.jpg"
+            src="/images/home/altar-banner.jpg"
             alt="Decorative altar artwork at St. Peter Parish"
             className="h-full w-full object-cover object-center"
           />
