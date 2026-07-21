@@ -11,19 +11,30 @@ const principles = [
   {
     title: "Faith",
     text: "We are Catholic men who lead, serve, protect, and defend our faith. Through prayer, the sacraments, and devotion, we grow in holiness and strengthen Christ's Church.",
+    image: "/images/home/faith-thumbnail.jpg",
+    imageAlt: "Priest elevating the Eucharist above a chalice",
+    imagePosition: "object-center",
   },
   {
     title: "Family",
     text: "We believe strong families are the foundation of a strong society. We commit ourselves to loving, protecting, and supporting our families in every stage of life.",
+    image: "/images/events/free-throw-fun.jpg",
+    imageAlt: "A smiling young participant at a Council 12906 family event",
+    imagePosition: "object-center",
   },
   {
     title: "Charity",
     text: "We serve our neighbor in need by putting charity into action. Through our works of mercy and volunteer service, we reflect Christ's love throughout our parish and community.",
+    image: "/images/events/coats-for-kids-volunteers.jpg",
+    imageAlt: "Council 12906 volunteers serving children in the community",
+    imagePosition: "object-center",
   },
   {
     title: "Unity",
     text: "Together we accomplish far more than any one man could alone. United in faith, friendship, and purpose, we support one another as brothers while serving our parish, our families, and our community.",
     image: "/images/home/unity-thumbnail.jpg",
+    imageAlt: "Knights of Columbus unity ceremony",
+    imagePosition: "object-[center_20%]",
   },
 ];
 
@@ -130,15 +141,13 @@ export default function Home() {
                 <h3 className="text-2xl font-black text-blue-950">{principle.title}</h3>
                 <p className="mt-4 leading-7 text-slate-600">{principle.text}</p>
 
-                {principle.image ? (
-                  <div className="mt-6 overflow-hidden rounded-xl border border-slate-200 bg-slate-100">
-                    <img
-                      src={principle.image}
-                      alt="Knights of Columbus unity ceremony"
-                      className="aspect-[4/3] w-full object-cover object-[center_20%]"
-                    />
-                  </div>
-                ) : null}
+                <div className="mt-6 overflow-hidden rounded-xl border border-slate-200 bg-slate-100">
+                  <img
+                    src={principle.image}
+                    alt={principle.imageAlt}
+                    className={`aspect-[4/3] w-full object-cover ${principle.imagePosition}`}
+                  />
+                </div>
               </div>
             ))}
           </div>
