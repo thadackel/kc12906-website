@@ -4,6 +4,13 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
+import { createPageMetadata } from "@/app/seo";
+
+export const metadata = createPageMetadata(
+  "Council BBQ Events",
+  "See Council 12906 barbecue fellowship, service, and photo highlights from St. Peter Parish in Covington.",
+  "/events/bbq",
+);
 
 export default function BbqPage() {
   return (
@@ -11,7 +18,7 @@ export default function BbqPage() {
       <Header />
       <main className="mx-auto max-w-6xl px-6 py-16">
         <Link href="/events" className="text-sm font-black uppercase tracking-wider text-blue-900 hover:text-yellow-600">
-          ← Back to Events
+          â† Back to Events
         </Link>
 
         <section className="mt-8 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-lg">
