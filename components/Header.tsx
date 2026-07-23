@@ -14,7 +14,8 @@ const navItems = [
   { label: "Get Involved", href: "/get-involved" },
   { label: "Membership", href: "/membership" },
   { label: "Gallery", href: "/gallery" },
-  { label: "Resources", href: "/resources" },\n  { label: "Members", href: "/members" },
+  { label: "Resources", href: "/resources" },
+  { label: "Members", href: "/members" },
   { label: "Contact", href: "/contact" },
 ];
 
