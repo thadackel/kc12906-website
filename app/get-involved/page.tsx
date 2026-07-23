@@ -1,6 +1,13 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Link from "next/link";
+import { createPageMetadata } from "@/app/seo";
+
+export const metadata = createPageMetadata(
+  "Get Involved",
+  "Support, donate to, or join Knights of Columbus St. Peter Council 12906 in Covington, Louisiana.",
+  "/get-involved",
+);
 
 const donationUrl =
   "https://checkout.square.site/merchant/8ZWJ066MCV5W6/checkout/6WE6LGBU3C7O74XS7YGBGSL5";
@@ -58,7 +65,7 @@ export default function GetInvolvedPage() {
               href="/programs"
               className="mt-6 inline-flex font-black text-blue-900 hover:text-yellow-600"
             >
-              View our programs →
+              View our programs â†’
             </Link>
           </div>
 
@@ -74,7 +81,7 @@ export default function GetInvolvedPage() {
               href="/events"
               className="mt-6 inline-flex font-black text-blue-900 hover:text-yellow-600"
             >
-              View upcoming events →
+              View upcoming events â†’
             </Link>
           </div>
         </section>

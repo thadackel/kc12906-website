@@ -3,6 +3,13 @@ import Header from "@/components/Header";
 import SectionTitle from "@/components/SectionTitle";
 import Image from "next/image";
 import Link from "next/link";
+import { createPageMetadata } from "@/app/seo";
+
+export const metadata = createPageMetadata(
+  "Events and Meetings",
+  "Explore Council 12906 meetings, parish events, youth activities, and charitable service in Covington, Louisiana.",
+  "/events",
+);
 
 const featuredEvents = [
   {

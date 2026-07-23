@@ -3,6 +3,13 @@ import Header from "@/components/Header";
 import SectionTitle from "@/components/SectionTitle";
 import Image from "next/image";
 import Link from "next/link";
+import { createPageMetadata } from "@/app/seo";
+
+export const metadata = createPageMetadata(
+  "Council Photo Gallery",
+  "View photos from Council 12906 events, charitable work, parish service, and fellowship.",
+  "/gallery",
+);
 
 const albums = [
   {

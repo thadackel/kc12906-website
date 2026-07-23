@@ -2,6 +2,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SectionTitle from "@/components/SectionTitle";
 import Link from "next/link";
+import { createPageMetadata } from "@/app/seo";
+
+export const metadata = createPageMetadata(
+  "Council Resources",
+  "Access Council 12906 dues, parish resources, and Knights of Columbus information.",
+  "/resources",
+);
 
 const duesUrl =
   "https://checkout.square.site/merchant/8ZWJ066MCV5W6/checkout/4DW52T2RH3TWFENKNKMDJKXQ";
