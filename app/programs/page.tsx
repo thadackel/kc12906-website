@@ -4,6 +4,13 @@ import SectionTitle from "@/components/SectionTitle";
 import Image from "next/image";
 import Link from "next/link";
 import { programs } from "./programData";
+import { createPageMetadata } from "@/app/seo";
+
+export const metadata = createPageMetadata(
+  "Faith in Action Programs",
+  "Explore Council 12906 faith, family, community, youth, and life programs serving St. Peter Parish and Covington.",
+  "/programs",
+);
 
 export default function Programs() {
   return (
@@ -66,7 +73,7 @@ export default function Programs() {
                   </h2>
                   <p className="mt-4 leading-7 text-slate-600">{program.summary}</p>
                   <p className="mt-6 font-black text-blue-900">
-                    Learn more <span aria-hidden="true">→</span>
+                    Learn more <span aria-hidden="true">â†’</span>
                   </p>
                 </div>
               </Link>
