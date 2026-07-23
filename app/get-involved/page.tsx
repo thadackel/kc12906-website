@@ -65,7 +65,7 @@ export default function GetInvolvedPage() {
               href="/programs"
               className="mt-6 inline-flex font-black text-blue-900 hover:text-yellow-600"
             >
-              View our programs â†’
+              View our programs →
             </Link>
           </div>
 
@@ -81,7 +81,7 @@ export default function GetInvolvedPage() {
               href="/events"
               className="mt-6 inline-flex font-black text-blue-900 hover:text-yellow-600"
             >
-              View upcoming events â†’
+              View upcoming events →
             </Link>
           </div>
         </section>

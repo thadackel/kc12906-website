@@ -18,7 +18,7 @@ export default function BbqPage() {
       <Header />
       <main className="mx-auto max-w-6xl px-6 py-16">
         <Link href="/events" className="text-sm font-black uppercase tracking-wider text-blue-900 hover:text-yellow-600">
-          â† Back to Events
+          ← Back to Events
         </Link>
 
         <section className="mt-8 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-lg">

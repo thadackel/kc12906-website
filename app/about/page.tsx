@@ -30,7 +30,7 @@ export default function Page() {
         <section className="mx-auto mt-12 max-w-4xl space-y-6 text-lg leading-8 text-slate-700">
           <p>
             Council 12906 was organized in 2001 at the request of Pastor Fr. William
-            â€œFr. Billâ€ McGough. In need of assistance with a variety of projects, he
+            “Fr. Bill” McGough. In need of assistance with a variety of projects, he
             reached out to several parishioners to contact the Fraternal Knights of
             Columbus. Born with 30 committed Catholic men, the new council was
             chartered by the Supreme Headquarters of the Knights of Columbus.
@@ -43,7 +43,7 @@ export default function Page() {
           </p>
           <p>
             We deliver food to families in need through the Food Bank and contribute
-            food to St. Peter&apos;s â€œLittle Pantryâ€ Ministry. We also collect coats
+            food to St. Peter&apos;s “Little Pantry” Ministry. We also collect coats
             locally for the Knights of Columbus Coats for Kids program, helping
             provide warm coats to people in need throughout the community.
           </p>

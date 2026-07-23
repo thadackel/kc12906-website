@@ -29,9 +29,9 @@ export default function Page() {
             <p className="mt-4"><strong>Location:</strong> St. Mary&apos;s Hall</p>
             <p className="mt-2"><strong>When:</strong> Second Tuesday of each month</p>
             <ul className="mt-4 space-y-2">
-              <li>6:30 PM â€” Rosary</li>
-              <li>6:50 PM â€” Meal</li>
-              <li>7:05 PM â€” General Membership Meeting</li>
+              <li>6:30 PM — Rosary</li>
+              <li>6:50 PM — Meal</li>
+              <li>7:05 PM — General Membership Meeting</li>
             </ul>
           </section>
           <section className="rounded-3xl border p-8 shadow-sm">

@@ -73,7 +73,7 @@ export default function Programs() {
                   </h2>
                   <p className="mt-4 leading-7 text-slate-600">{program.summary}</p>
                   <p className="mt-6 font-black text-blue-900">
-                    Learn more <span aria-hidden="true">â†’</span>
+                    Learn more <span aria-hidden="true">→</span>
                   </p>
                 </div>
               </Link>
