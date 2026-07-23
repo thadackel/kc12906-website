@@ -2,6 +2,13 @@ import Base64Photo from "@/components/Base64Photo";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import SectionTitle from "@/components/SectionTitle";
+import { createPageMetadata } from "@/app/seo";
+
+export const metadata = createPageMetadata(
+  "Council Leadership",
+  "Meet the leadership of Knights of Columbus St. Peter Council 12906 in Covington, Louisiana.",
+  "/leadership",
+);
 
 export default function Page() {
   return (
