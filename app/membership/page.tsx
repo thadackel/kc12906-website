@@ -2,6 +2,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SectionTitle from "@/components/SectionTitle";
 import Link from "next/link";
+import { createPageMetadata } from "@/app/seo";
+
+export const metadata = createPageMetadata(
+  "Membership and Council Dues",
+  "Learn how to become a Knight and securely pay annual dues for Knights of Columbus Council 12906.",
+  "/membership",
+);
 
 const joinUrl = "https://www.kofc.org/get-involved/join-kofc/";
 
