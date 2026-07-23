@@ -49,11 +49,12 @@ export async function GET(
       new URL(request.url).searchParams.get("download") === "1"
         ? "attachment"
         : "inline";
+    const safeFilename = path.basename(requestedFile).replaceAll('"', "");
 
-    return new NextResponse(file, {
+    return new NextResponse(new Uint8Array(file), {
       headers: {
         "Cache-Control": "private, no-store, max-age=0",
-        "Content-Disposition": `${disposition}; filename="${path.basename(requestedFile).replaceAll('"', "")}"`,
+        "Content-Disposition": `${disposition}; filename="${safeFilename}"`,
         "Content-Type": contentTypes[extension] ?? "application/octet-stream",
         "X-Content-Type-Options": "nosniff",
       },
