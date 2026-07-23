@@ -21,7 +21,7 @@ export default function FishFriesPage() {
     <>
       <Header />
       <main className="mx-auto max-w-6xl px-6 py-16">
-        <Link href="/events" className="text-sm font-black uppercase tracking-wider text-blue-900 hover:text-yellow-600">â† Back to Events</Link>
+        <Link href="/events" className="text-sm font-black uppercase tracking-wider text-blue-900 hover:text-yellow-600">← Back to Events</Link>
         <section className="mt-8 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-lg">
           <div className="relative aspect-[16/8] bg-slate-100">
             <Image src="/images/events/fish-fry-hero.jpg" alt="Council 12906 members serving food at a parish fish fry" fill priority className="object-cover" sizes="(min-width: 1024px) 1024px, 100vw" />
