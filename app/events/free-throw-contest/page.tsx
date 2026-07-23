@@ -3,6 +3,13 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
+import { createPageMetadata } from "@/app/seo";
+
+export const metadata = createPageMetadata(
+  "Free Throw Contest",
+  "Explore the Council 12906 youth free throw contest, sportsmanship, and community fellowship.",
+  "/events/free-throw-contest",
+);
 
 const gallery = [
   { src: "/images/events/free-throw-coach.jpg", alt: "A volunteer holding a basketball during the free throw contest" },
@@ -14,7 +21,7 @@ export default function FreeThrowContestPage() {
     <>
       <Header />
       <main className="mx-auto max-w-6xl px-6 py-16">
-        <Link href="/events" className="text-sm font-black uppercase tracking-wider text-blue-900 hover:text-yellow-600">← Back to Events</Link>
+        <Link href="/events" className="text-sm font-black uppercase tracking-wider text-blue-900 hover:text-yellow-600">â† Back to Events</Link>
         <section className="mt-8 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-lg">
           <div className="relative aspect-[16/8] bg-slate-100">
             <Image src="/images/events/free-throw-hero.jpg" alt="Basketball passing through the hoop at the free throw contest" fill priority className="object-cover" sizes="(min-width: 1024px) 1024px, 100vw" />
