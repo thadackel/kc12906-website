@@ -31,7 +31,10 @@ export default function Page() {
             <p className="text-sm font-black uppercase tracking-[0.25em] text-yellow-600">Officers</p>
             <h2 className="mt-3 text-3xl font-black text-blue-950">Additional Officers</h2>
             <p className="mt-4 leading-7 text-slate-600">
-              Add Deputy Grand Knight, Chancellor, Recorder, Treasurer, Advocate, Warden, Guards, Trustees, and program personnel here when confirmed.
+              Council officers support the Grand Knight by coordinating
+              meetings, finances, membership, programs, communications, and
+              fraternal activities. The complete officer roster will be
+              published after it is confirmed by the council.
             </p>
           </div>
         </div>

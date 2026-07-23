@@ -1,6 +1,10 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SectionTitle from "@/components/SectionTitle";
+import Link from "next/link";
+
+const facebookUrl =
+  "https://www.facebook.com/p/St-Peter-Knights-of-Columbus-covington-61568291579406/";
 
 export default function Page() {
   return (
@@ -32,7 +36,18 @@ export default function Page() {
               Covington, LA 70433
             </address>
             <p className="mt-4"><strong>Grand Knight:</strong> Gerald Nuss</p>
-            <p className="mt-4 text-slate-600">Contact email and phone number can be added here once confirmed.</p>
+            <p className="mt-4 leading-7 text-slate-600">
+              For council questions, visit a monthly meeting or contact Council
+              12906 through its Facebook page.
+            </p>
+            <Link
+              href={facebookUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-block rounded-lg bg-yellow-500 px-6 py-3 font-black text-blue-950 transition hover:bg-yellow-400"
+            >
+              Contact Us on Facebook
+            </Link>
           </section>
         </div>
       </main>
