@@ -5,6 +5,24 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProgram, programs } from "../programData";
+import { createPageMetadata } from "@/app/seo";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const program = getProgram(slug);
+
+  if (!program) return {};
+
+  return createPageMetadata(
+    program.title,
+    program.summary,
+    `/programs/${program.slug}`,
+  );
+}
 
 export function generateStaticParams() {
   return programs.map((program) => ({ slug: program.slug }));
