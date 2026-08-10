@@ -57,6 +57,76 @@ export default function Page() {
             </Link>
           </section>
         </div>
+
+        <section className="mx-auto mt-8 max-w-5xl rounded-3xl border border-blue-100 bg-blue-50 p-8 shadow-sm">
+          <h2 className="text-2xl font-black text-blue-950">
+            Council Leadership Contacts
+          </h2>
+          <div className="mt-6 grid gap-5 md:grid-cols-3">
+            <article className="rounded-2xl bg-white p-6 shadow-sm">
+              <p className="text-sm font-black uppercase tracking-wider text-blue-700">
+                Deputy Grand Knight
+              </p>
+              <h3 className="mt-2 text-xl font-black text-blue-950">
+                Dr. Jerome Buller
+              </h3>
+              <a
+                href="mailto:jlbuller@gmail.com"
+                className="mt-4 block break-all font-bold text-blue-800 hover:text-blue-600"
+              >
+                jlbuller@gmail.com
+              </a>
+              <a
+                href="tel:+14105990908"
+                className="mt-2 block font-bold text-blue-800 hover:text-blue-600"
+              >
+                410-599-0908
+              </a>
+            </article>
+
+            <article className="rounded-2xl bg-white p-6 shadow-sm">
+              <p className="text-sm font-black uppercase tracking-wider text-blue-700">
+                Financial Secretary
+              </p>
+              <h3 className="mt-2 text-xl font-black text-blue-950">
+                Brian Marcel
+              </h3>
+              <a
+                href="mailto:brianmarcel40@gmail.com"
+                className="mt-4 block break-all font-bold text-blue-800 hover:text-blue-600"
+              >
+                brianmarcel40@gmail.com
+              </a>
+              <a
+                href="tel:+19855024403"
+                className="mt-2 block font-bold text-blue-800 hover:text-blue-600"
+              >
+                985-502-4403
+              </a>
+            </article>
+
+            <article className="rounded-2xl bg-white p-6 shadow-sm">
+              <p className="text-sm font-black uppercase tracking-wider text-blue-700">
+                Membership Director
+              </p>
+              <h3 className="mt-2 text-xl font-black text-blue-950">
+                James Klonica
+              </h3>
+              <a
+                href="mailto:James.klonica@gmail.com"
+                className="mt-4 block break-all font-bold text-blue-800 hover:text-blue-600"
+              >
+                James.klonica@gmail.com
+              </a>
+              <a
+                href="tel:+15049095338"
+                className="mt-2 block font-bold text-blue-800 hover:text-blue-600"
+              >
+                504-909-5338
+              </a>
+            </article>
+          </div>
+        </section>
       </main>
       <Footer />
     </>
