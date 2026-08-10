@@ -43,6 +43,18 @@ export default function Page() {
               Covington, LA 70433
             </address>
             <p className="mt-4"><strong>Grand Knight:</strong> Gerald Nuss</p>
+            <a
+              href="mailto:gtnuss58@gmail.com"
+              className="mt-2 block break-all font-bold text-blue-800 hover:text-blue-600"
+            >
+              gtnuss58@gmail.com
+            </a>
+            <a
+              href="tel:+19853731784"
+              className="mt-2 block font-bold text-blue-800 hover:text-blue-600"
+            >
+              985-373-1784
+            </a>
             <p className="mt-4 leading-7 text-slate-600">
               For council questions, visit a monthly meeting or contact Council
               12906 through its Facebook page.
