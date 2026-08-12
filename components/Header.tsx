@@ -15,6 +15,7 @@ const navItems = [
   { label: "Membership", href: "/membership" },
   { label: "Gallery", href: "/gallery" },
   { label: "Resources", href: "/resources" },
+  { label: "Members 🔒", href: "/members" },
   { label: "Contact", href: "/contact" },
 ];
 
