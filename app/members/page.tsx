@@ -26,6 +26,21 @@ export default async function MembersPage() {
         </section>
 
         <section className="mx-auto mt-12 max-w-5xl rounded-3xl border border-blue-100 bg-blue-50 p-8 shadow-sm md:p-10">
+          <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+            <div>
+              <p className="text-sm font-black uppercase tracking-widest text-blue-700">Meeting Minutes</p>
+              <h3 className="mt-3 text-3xl font-black text-blue-950">Council Meeting Archive</h3>
+              <p className="mt-4 max-w-2xl leading-7 text-slate-700">
+                Council meeting minutes will be listed here as they are published for members.
+              </p>
+            </div>
+            <span className="inline-flex shrink-0 rounded-full bg-white px-4 py-2 text-sm font-black text-blue-900 shadow-sm">
+              0 documents
+            </span>
+          </div>
+        </section>
+
+        <section className="mx-auto mt-8 max-w-5xl rounded-3xl border border-blue-100 bg-blue-50 p-8 shadow-sm md:p-10">
           <p className="text-sm font-black uppercase tracking-widest text-blue-700">Member Document</p>
           <h3 className="mt-3 text-3xl font-black text-blue-950">Adoration Schedule 2006</h3>
           <p className="mt-4 max-w-2xl leading-7 text-slate-700">
