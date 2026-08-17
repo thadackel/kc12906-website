@@ -3,6 +3,8 @@ import Image from "next/image";
 import { programs } from "@/app/programs/programData";
 
 const joinUrl = "https://www.kofc.org/get-involved/join-kofc/";
+const duesUrl =
+  "https://checkout.square.site/merchant/8ZWJ066MCV5W6/checkout/4DW52T2RH3TWFENKNKMDJKXQ";
 const facebookUrl =
   "https://www.facebook.com/p/St-Peter-Knights-of-Columbus-covington-61568291579406/";
 
@@ -61,6 +63,14 @@ export default function Header() {
               >
                 <path d="M13.7 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.3-1.5 1.6-1.5H17V4.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.5V14h2.8v8h3.4Z" />
               </svg>
+            </Link>
+            <Link
+              href={duesUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg border-2 border-yellow-400 px-6 py-3 text-lg font-black text-yellow-400 transition hover:bg-yellow-400 hover:text-blue-950"
+            >
+              Pay Your Dues
             </Link>
             <Link
               href={joinUrl}
