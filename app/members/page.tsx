@@ -45,7 +45,7 @@ export default async function MembersPage() {
                 target="_blank"
                 className="mt-3 inline-flex rounded-xl bg-yellow-500 px-6 py-3 font-black text-blue-950 transition hover:bg-yellow-400 sm:ml-3 sm:mt-6"
               >
-                Download August 11, 2026 Minutes
+                View August 11, 2026 Minutes
               </Link>
             </div>
             <span className="inline-flex shrink-0 rounded-full bg-white px-4 py-2 text-sm font-black text-blue-900 shadow-sm">
