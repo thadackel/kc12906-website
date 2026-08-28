@@ -12,6 +12,7 @@ const staticRoutes = [
   "/events/coats-for-kids",
   "/events/fish-fries",
   "/events/free-throw-contest",
+  "/fourth-degree",
   "/gallery",
   "/get-involved",
   "/leadership",
