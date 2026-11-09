@@ -80,7 +80,7 @@ export default function Membership() {
             Pay your Council 12906 annual membership dues securely through Square. The checkout page will open in a new tab.
           </p>
           <Link
-            href="https://checkout.square.site/merchant/8ZWJ066MCV5W6/checkout/4DW52T2RH3TWFENKNKMDJKXQ"
+            href="https://checkout.square.site/merchant/8ZWJ066MCV5W6/checkout/J45R4KHCEVGLCUPO7AOGB4TN"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-8 inline-block rounded-lg bg-yellow-500 px-8 py-4 text-lg font-black text-blue-950 shadow-sm transition-colors hover:bg-yellow-400 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-950"

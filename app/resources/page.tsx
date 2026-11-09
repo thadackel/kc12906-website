@@ -11,7 +11,7 @@ export const metadata = createPageMetadata(
 );
 
 const duesUrl =
-  "https://checkout.square.site/merchant/8ZWJ066MCV5W6/checkout/4DW52T2RH3TWFENKNKMDJKXQ";
+  "https://checkout.square.site/merchant/8ZWJ066MCV5W6/checkout/J45R4KHCEVGLCUPO7AOGB4TN";
 
 const resources = [
   {
