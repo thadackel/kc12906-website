@@ -61,9 +61,16 @@ export default async function MembersPage() {
               >
                 View October 13, 2026 Minutes
               </Link>
+              <Link
+                href="/members/documents/meeting-minutes-2026-11-10"
+                target="_blank"
+                className="mt-3 inline-flex rounded-xl bg-yellow-500 px-6 py-3 font-black text-blue-950 transition hover:bg-yellow-400 sm:ml-3 sm:mt-6"
+              >
+                View November 10, 2026 Agenda
+              </Link>
             </div>
             <span className="inline-flex shrink-0 rounded-full bg-white px-4 py-2 text-sm font-black text-blue-900 shadow-sm">
-              4 documents
+              5 documents
             </span>
           </div>
         </section>
